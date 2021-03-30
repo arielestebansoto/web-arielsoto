@@ -1,0 +1,33 @@
+.header {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    height: 100px
+}
+
+.header-logo {
+    align-self: center;
+}
+.header-logo h1 {
+    margin: 0;
+    padding: 20px 0 20px 20px;
+    color: white;
+}
+.header-menu {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min-content;
+}
+
+.header-menu svg {
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+    z-index: 100;
+    fill: white;
+}
