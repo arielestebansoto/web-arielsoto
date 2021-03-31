@@ -1,9 +1,10 @@
 .header {
     display: grid;
-    grid-template-columns: 6fr 1fr;
+    grid-template-columns: 3fr 1fr;
 
     position: fixed;
     z-index: 200;
+
     width: 100%;
     height: 100px
 }
@@ -21,13 +22,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: min-content;
+    width: 100%;
 }
-
-.header-menu svg {
+.icon-menu svg {
     width: 20px;
     height: 20px;
-    padding: 20px;
     z-index: 100;
     fill: white;
 }

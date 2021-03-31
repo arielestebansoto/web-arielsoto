@@ -1,12 +1,28 @@
-body {
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+@font-face {
+  font-family: oxygen;
+  src: url(../../../arc/font/Oxygen-Regular.ttf);
+}
+@font-face {
+  font-family: oxygenLight;
+  src: url(../../../arc/font/Oxygen-Light.ttf);
+}
+@font-face {
+  font-family: oxygenBold;
+  src: url(../../../arc/font/Oxygen-Bold.ttf);
+}
+* {
+  font-family: Oxygen;
+}
+
 .header {
   display: grid;
-  grid-template-columns: 6fr 1fr;
+  grid-template-columns: 3fr 1fr;
   position: fixed;
   z-index: 200;
   width: 100%;
@@ -28,14 +44,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: -webkit-min-content;
-  width: min-content;
+  width: 100%;
 }
 
-.header-menu svg {
+.icon-menu svg {
   width: 20px;
   height: 20px;
-  padding: 20px;
   z-index: 100;
   fill: white;
 }
@@ -54,10 +68,19 @@ body {
   padding: 0;
 }
 
+.nav-category {
+  margin: 0;
+  padding-left: 40px;
+  padding-bottom: 30px;
+  padding-right: 60px;
+  font-size: 40px;
+}
+
 .nav {
   display: none;
   width: 100vw;
-  height: 100%;
+  height: -webkit-max-content;
+  height: max-content;
   padding: 120px 0 0;
   position: absolute;
   z-index: 100;
@@ -66,46 +89,84 @@ body {
   font-size: 13px;
 }
 
-.nav-category {
-  margin: 0;
-  padding-left: 40px;
-  padding-bottom: 30px;
-  font-size: 40px;
-}
-
 .nav-category a {
   display: block;
   padding-bottom: 20px;
 }
 
-.nav-main {
+.main-info {
   padding-left: 40px;
 }
 
-.nav-about {
-  padding: 0 0 30px 0;
+.main-info a {
+  text-decoration: none;
+  color: white;
 }
 
-.nav-about a:first-child {
-  padding-right: 20px;
+.main-info li {
+  list-style: none;
 }
 
-.social-media {
-  display: flex;
+.main-info ul {
+  margin: 0;
+  padding: 0;
 }
 
-.nav-info ul {
+.main-info ul {
   width: 50%;
   padding-bottom: 40px;
   float: left;
 }
 
-.nav-info ul li {
+.main-info ul li {
   padding-bottom: 20px;
+  overflow-wrap: break-word;
 }
 
-.social-media li {
+.info-about {
+  padding: 0 0 40px 0;
+}
+
+.info-about a {
+  font-family: OxygenBold;
+  font-size: 15px;
+  color: #fff;
+}
+
+.info-about a:first-child {
   padding-right: 20px;
+}
+
+.info-social {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.info-social li {
+  font-family: OxygenBold;
+  font-size: 15px;
+  color: white;
+}
+
+.info-social ul li:first-child {
+  font-family: OxygenBold;
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.info-social li {
+  padding-right: 20px;
+}
+
+.social-media {
+  padding-bottom: 30px;
+}
+
+.social-media a {
+  display: block;
+  padding-bottom: 10px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .carousel {
@@ -113,7 +174,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
 }
@@ -133,4 +194,119 @@ body {
   height: 100%;
   position: relative;
   z-index: 1;
+}
+
+.blog-aside {
+  display: none;
+}
+
+.blog-post {
+  width: 100%;
+}
+
+.post {
+  padding: 40px;
+}
+
+.post h1 {
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+.post h3 {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.post p {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.quickgalery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 2px;
+  width: 100%;
+  background-color: black;
+}
+
+.galerydiv {
+  width: 100%;
+}
+
+.galerydiv img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  height: auto;
+  padding: 30px;
+  background-color: black;
+  color: white;
+}
+
+.name {
+  padding-bottom: 40px;
+}
+
+.nav-desktop {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .c-nav {
+    width: 80%;
+    margin: auto;
+  }
+
+  .nav-category {
+    float: left;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .carousel {
+    width: 70%;
+    height: 85vh;
+    margin: auto;
+  }
+
+  .carousel span {
+    display: none;
+  }
+
+  .carousel__titles {
+    left: -80px;
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .nav-desk {
+    display: block;
+    width: 100%;
+    height: 15vh;
+  }
+
+  .nav-desk-categories li {
+    list-style: none;
+  }
+
+  .nav-desk-categories a {
+    text-decoration: none;
+    font-family: OxygenBold;
+    letter-spacing: 3px;
+    color: black;
+  }
+
+  .nav-desk-categories {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: auto;
+    padding-top: 50px;
+  }
 }

@@ -1,4 +1,13 @@
-@use './global/normalice';
-@use './organisms/header';
-@use './organisms/menu.scss';
-@use './organisms/carousel.scss';
+@use './global/_normalice.scss';
+@use './global/_font.scss';
+@use './global/_global.scss';
+@use './global/_variables.scss';
+@use './organisms/_header.scss';
+@use './organisms/_menu.scss';
+@use './molecules/_main-info.scss';
+@use './organisms/_carousel.scss';
+@use './templates/_posts.scss';
+@use './templates/_quickgalery.scss';
+@use './organisms/_footer.scss';
+@use './templates/_nav-desktop.scss';
+@use './breakpoints.scss';
