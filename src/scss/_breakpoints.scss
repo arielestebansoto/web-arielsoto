@@ -5,7 +5,7 @@
     }
     .nav-category {
         float: left;
-    }    
+    }
 }
 @media only screen and (min-width: 768px) {
     .carousel {
@@ -17,7 +17,8 @@
         display: none;
     }
     .carousel__titles {
-        left: -80px;
+        left: 0;
+        bottom: 100px;
         font-size: 40px;
     }
 }
@@ -43,5 +44,25 @@
         width: 70%;
         margin: auto;
         padding-top: 50px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .post, .blog-entries {
+        width: 75%;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .quickgalery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .post, .blog-entries {
+        width: 60%;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .quickgalery {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }

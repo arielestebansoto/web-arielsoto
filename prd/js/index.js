@@ -6,10 +6,10 @@ iconMenu.innerHTML = `<svg height="384pt" viewBox="0 -53 384 384" width="384pt" 
 iconMenu.addEventListener('click', toggleMenu)
 
 function toggleMenu() {
-    if (nav.style.display === 'block') {
+    if (nav.style.display === 'flex') {
         nav.style.display = 'none'
     } else {
-        nav.style.display = 'block'
+        nav.style.display = 'flex'
     }
 }
 
@@ -32,5 +32,5 @@ for (i = 0; i < displayPhotos; i++) {
     div.appendChild(IMG)
     quickGalery.appendChild(div)
 }
-
+/* ----- APPEND PORTFOLIO AV ----- */
 /* ----- MENU SOCIAL SVG INLINE ----- */
