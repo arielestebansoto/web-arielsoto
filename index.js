@@ -15,7 +15,7 @@ function toggleMenu() {
 
 /* ----- APPEND QUICKPORTFOLIO IMAGES ----- */
 const quickGalery = document.querySelector('.quickgalery')
-const imgDIR = '../arc/img/quickgalery/' 
+const imgDIR = './img/quickgalery/' 
 const imgURL = 'quickgaleryimages-'
 const imgFORMAT = '.jpg'
 const displayPhotos = 23
