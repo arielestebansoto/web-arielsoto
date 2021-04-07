@@ -7,8 +7,6 @@
 
     width: 100%;
     height: 100px;
-
-    background-color: rgba($color: #000000, $alpha: .1);
 }
 
 .header-logo {
@@ -19,8 +17,9 @@
 .header-logo h1 {
     margin: 0;
     padding: 20px 0 20px 20px;
+
+    font-size: 18px;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0, .2 );
 }
 .header-menu {
     justify-self: center;
