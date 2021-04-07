@@ -2,6 +2,5 @@
 **.scss
 *.pug
 *.scss
-src/
 src
-
+src/
