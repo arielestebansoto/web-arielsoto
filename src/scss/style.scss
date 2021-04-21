@@ -1,7 +1,6 @@
+@use './base/variables';
+@use './base/ui';
 @use './global/_normalice.scss';
-@use './global/_font.scss';
-@use './global/_global.scss';
-@use './global/_variables.scss';
 @use './organisms/_header.scss';
 @use './organisms/_menu.scss';
 @use './molecules/_main-info.scss';

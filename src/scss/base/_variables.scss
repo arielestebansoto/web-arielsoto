@@ -1,0 +1,80 @@
+$color-dark: #1d1d1d;
+$color-white: #ffffff;
+
+$font-color: $color-white;
+
+$line-heigth: 1.4;
+
+$font-size-nav-mobile: 16px;
+$font-size-nav-desktop: 24px;
+$font-size-nav-tablet: $font-size-nav-desktop;
+
+$letter-spacing-nav-menu-mobile: 0.5px;
+$letter-spacing-nav-menu-desktop: $letter-spacing-nav-menu-mobile;
+$letter-spacing-nav-menu-tablet: $letter-spacing-nav-menu-desktop;
+
+$font-size-title-hero-mobile: 0px;
+$font-size-title-hero-desktop: 0px;
+$font-size-title-hero-tablet: 0px;
+$letter-spacing-title-hero-mobile: 0px;
+$letter-spacing-title-hero-tablet: 0px;
+$letter-spacing-title-hero-desktop: 0px;
+
+$font-size-section-title-mobile: 36px;
+$font-size-section-title-tablet: 0;
+$font-size-section-title-desktop: 0;
+
+$letter-spacing-section-title-mobile: 0px;
+
+/* complete */
+$subtitle: 0px;
+$menu-category: 0px;
+$menu-subcategory: 0px;
+$blog-title: 0px;
+$blog-extract: 0px;
+$blog-date: 0px;
+
+$font-size-text-mobile: 16px;
+$font-size-text-desktop: 24px;
+$font-size-text-tablet: $font-size-text-desktop;
+
+$letter-spacing-text-mobile: 0.5px;
+$letter-spacing-text-desktop: 0px;
+$letter-spacing-text-tablet: $letter-spacing-text-desktop;
+
+
+$margin-grid-mobile: 16px;
+$margin-grid-tablet: 24px;
+$margin-grid-desktop: 32px;
+
+$margin-post-mobile: 64px;
+
+$gutter-grid-mobile: 32px;
+$gutter-grid-tablet: 32px;
+$gutter-grid-desktop: 32px;
+
+$spacing-little: 6px;
+$spacing-small: 12px;
+$spacing-medium: 24px;
+$spacing-big: 48px;
+
+$icon-size: 24px;
+$icon-container: 48px;
+
+@font-face {
+    font-family: ubuntu-regular;
+    src: url(./font/Ubuntu-Regular.ttf);
+  }
+  @font-face {
+    font-family: ubuntu-light;
+    src: url(./font/Ubuntu-Light.ttf);
+  }
+  @font-face {
+    font-family: ubuntu-medium;
+    src: url(./font/Ubuntu-Medium.ttf)
+}
+  @font-face {
+    font-family: ubuntu-bold;
+    src: url(./font/Ubuntu-Bold.ttf);
+  }
+

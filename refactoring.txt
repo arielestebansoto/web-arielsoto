@@ -1,8 +1,11 @@
-tipografia
+UI tipografia
 	tamaños.
 	line height
 	letter-spacing
-spacing
+
+spacing-small
+	-medium
+	-big
 
 
 base
@@ -13,7 +16,7 @@ base
 		box shadow.
 		spacing
 		
-	
+	tipografias
 	elementos.classes
 		.h1
 		.h2 { etc }
@@ -22,5 +25,8 @@ lib
 	
 layout
 	
-
+components
+	grids.scss
+	utilities.scss que son todos float left, align right. etc
+	
 
