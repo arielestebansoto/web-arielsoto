@@ -1,0 +1,26 @@
+tipografia
+	tamaños.
+	line height
+	letter-spacing
+spacing
+
+
+base
+	colores
+		escalas de grises	
+		opacidades
+		font.
+		box shadow.
+		spacing
+		
+	
+	elementos.classes
+		.h1
+		.h2 { etc }
+
+lib
+	
+layout
+	
+
+
