@@ -1,29 +1,49 @@
 @font-face {
-  font-family: ubuntu-regular;
+  font-family: ubuntu;
   src: url(./font/Ubuntu-Regular.ttf);
+  font-weight: 400;
 }
 @font-face {
-  font-family: ubuntu-light;
+  font-family: ubuntu;
   src: url(./font/Ubuntu-Light.ttf);
+  font-weight: 100;
 }
 @font-face {
-  font-family: ubuntu-medium;
+  font-family: ubuntu;
   src: url(./font/Ubuntu-Medium.ttf);
+  font-weight: 500;
 }
 @font-face {
-  font-family: ubuntu-bold;
+  font-family: ubuntu;
   src: url(./font/Ubuntu-Bold.ttf);
+  font-weight: 600;
 }
 * {
-  font-family: ubuntu-regular;
+  font-family: ubuntu;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-/* place holder */
-.text-blog, .text {
-  color: white;
+/* mixin para los breakpoitns */
+h1 {
+  color: #ffffff;
+  font-size: 144px;
+  letter-spacing: -1.5px;
+  line-height: 201.6px;
+  font-weight: 600;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+h1 {
+  font-weight: 100;
 }
 
 .header {

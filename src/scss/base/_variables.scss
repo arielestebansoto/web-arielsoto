@@ -1,7 +1,10 @@
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
 $color-dark: #1d1d1d;
 $color-white: #ffffff;
 
-$font-color: $color-white;
+$color-font-white: $color-white;
 
 $margin-grid-mobile: 16px;
 $margin-grid-tablet: 24px;
@@ -30,93 +33,102 @@ $letter-spacing-nav-menu-mobile: 0.5px;
 $letter-spacing-nav-menu-desktop: $letter-spacing-nav-menu-mobile;
 $letter-spacing-nav-menu-tablet: $letter-spacing-nav-menu-desktop;
 
-$font-size-h0: 144px;
-$letter-spacing-h0: -1.5px;
-$line-height-h0: $font-size-h0 * $line-height;
-$font-weight-h0: 'bold';
+$regular: 400;
+$lighter: 100;
+$medium: 500;
+$bold: 600;
+
+$font-size-hero: 144px;
+$letter-spacing-hero: -1.5px;
+$line-height-hero: $font-size-hero * $line-height;
+$font-weight-hero: $bold;
 
 $font-size-h1: 98px;
 $letter-spacing-h1: -1.5px;
 $line-height-h1: $font-size-h1 * $line-height;
-$font-weight-h1: 'light';
+$font-weight-h1: $lighter;
 
 $font-size-h2: 60px;
 $letter-spacing-h2: -0.5px;
 $line-height-h2: $font-size-h2 * $line-height;
-$font-weight-h2: 'light';
-$font-weight-h2-bold: 'bold';
+$font-weight-h2: $lighter;
+$font-weight-h2-bold: $bold;
 
 $font-size-h3: 48px;
 $letter-spacing-h3: 0;
 $line-height-h3: $font-size-h3 * $line-height;
-$font-weight-h3: 'regular';
-$font-weight-h3-bold: 'bold';
+$font-weight-h3: $regular;
+$font-weight-h3-bold: $bold;
 
 $font-size-h4: 36px;
 $letter-spacing-h4: 0.25px;
 $line-height-h4: $font-size-h4 * $line-height;
-$font-weight-h4: 'regular';
-$font-weight-h4-bold: 'bold';
+$font-weight-h4: $regular;
+$font-weight-h4-bold: $bold;
 
 $font-size-h5: 24px;
 $letter-spacing-h5: 0;
 $line-height-h5: $font-size-h5 * $line-height;
-$font-weight-h5: 'regular';
+$font-weight-h5: $regular;
 
 $font-size-h6: 20px;
 $letter-spacing-h6: 0.15px;
 $line-height-h6: $font-size-h6 * $line-height;
-$font-weight-h6: 'medium';
+$font-weight-h6: $medium;
 
 $font-size-sub1: 16px;
 $letter-spacing-sub1: 0.15px;
 $line-height-sub1: $font-size-sub1 * $line-height;
-$font-weight-sub1: 'medium';
+$font-weight-sub1: $medium;
 
 $font-size-sub1-desktop: 20px;
 $letter-spacing-sub1-desktop: 0.1px;
 $line-height-sub1-desktop: $font-size-sub1-desktop * $line-height;
-$font-weight-sub1-desktop: 'medium';
+$font-weight-sub1-desktop: $medium;
 
 $font-size-body1: 16px;
 $letter-spacing-body1: 0.5px;
 $line-height-body1: $font-size-body1 * $line-height;
-$font-weight-body1: 'regular';
+$font-weight-body1: $regular;
 
 $font-size-body2: 14px;
 $letter-spacing-body2: 0.25px;
 $line-height-body2: $font-size-body2 * $line-height;
-$font-weight-body2: 'regular';
+$font-weight-body2: $regular;
 
 $font-size-body-desktop: 16px;
 $letter-spacing-body-desktop: 0px;
 $line-height-body-desktop: $font-size-body-desktop * $line-height;
-$font-weight-body-desktop: 'regular';
+$font-weight-body-desktop: $regular;
 
 $font-size-button: 14px;
 $letter-spacing-button: 1.25px;
 $line-height-button: $font-size-button * $line-height;
-$font-weight-button: 'medium';
+$font-weight-button: $medium;
 $text-transform-button: 'uppercase';
 
 $font-size-button-desktop: 32px;
 $letter-spacing-button-desktop: 1.25px;
 $line-height-button-desktop: $font-size-button-desktop * $line-height;
-$font-weight-button-desktop: 'regular';
+$font-weight-button-desktop: $regular;
 
 @font-face {
-    font-family: ubuntu-regular;
+    font-family: ubuntu;
     src: url(./font/Ubuntu-Regular.ttf);
+    font-weight: $regular;
   }
   @font-face {
-    font-family: ubuntu-light;
+    font-family: ubuntu;
     src: url(./font/Ubuntu-Light.ttf);
+    font-weight: $lighter;
   }
   @font-face {
-    font-family: ubuntu-medium;
-    src: url(./font/Ubuntu-Medium.ttf)
-}
+    font-family: ubuntu;
+    src: url(./font/Ubuntu-Medium.ttf);
+    font-weight: $medium;
+  }
   @font-face {
-    font-family: ubuntu-bold;
+    font-family: ubuntu;
     src: url(./font/Ubuntu-Bold.ttf);
+    font-weight: 600;
   }
