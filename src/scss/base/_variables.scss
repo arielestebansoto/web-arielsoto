@@ -3,46 +3,6 @@ $color-white: #ffffff;
 
 $font-color: $color-white;
 
-$line-heigth: 1.4;
-
-$font-size-nav-mobile: 16px;
-$font-size-nav-desktop: 24px;
-$font-size-nav-tablet: $font-size-nav-desktop;
-
-$letter-spacing-nav-menu-mobile: 0.5px;
-$letter-spacing-nav-menu-desktop: $letter-spacing-nav-menu-mobile;
-$letter-spacing-nav-menu-tablet: $letter-spacing-nav-menu-desktop;
-
-$font-size-title-hero-mobile: 0px;
-$font-size-title-hero-desktop: 0px;
-$font-size-title-hero-tablet: 0px;
-$letter-spacing-title-hero-mobile: 0px;
-$letter-spacing-title-hero-tablet: 0px;
-$letter-spacing-title-hero-desktop: 0px;
-
-$font-size-section-title-mobile: 36px;
-$font-size-section-title-tablet: 0;
-$font-size-section-title-desktop: 0;
-
-$letter-spacing-section-title-mobile: 0px;
-
-/* complete */
-$subtitle: 0px;
-$menu-category: 0px;
-$menu-subcategory: 0px;
-$blog-title: 0px;
-$blog-extract: 0px;
-$blog-date: 0px;
-
-$font-size-text-mobile: 16px;
-$font-size-text-desktop: 24px;
-$font-size-text-tablet: $font-size-text-desktop;
-
-$letter-spacing-text-mobile: 0.5px;
-$letter-spacing-text-desktop: 0px;
-$letter-spacing-text-tablet: $letter-spacing-text-desktop;
-
-
 $margin-grid-mobile: 16px;
 $margin-grid-tablet: 24px;
 $margin-grid-desktop: 32px;
@@ -60,6 +20,89 @@ $spacing-big: 48px;
 
 $icon-size: 24px;
 $icon-container: 48px;
+$line-height: 1.4;
+
+$font-size-nav-mobile: 16px;
+$font-size-nav-desktop: 24px;
+$font-size-nav-tablet: $font-size-nav-desktop;
+
+$letter-spacing-nav-menu-mobile: 0.5px;
+$letter-spacing-nav-menu-desktop: $letter-spacing-nav-menu-mobile;
+$letter-spacing-nav-menu-tablet: $letter-spacing-nav-menu-desktop;
+
+$font-size-h0: 144px;
+$letter-spacing-h0: -1.5px;
+$line-height-h0: $font-size-h0 * $line-height;
+$font-weight-h0: 'bold';
+
+$font-size-h1: 98px;
+$letter-spacing-h1: -1.5px;
+$line-height-h1: $font-size-h1 * $line-height;
+$font-weight-h1: 'light';
+
+$font-size-h2: 60px;
+$letter-spacing-h2: -0.5px;
+$line-height-h2: $font-size-h2 * $line-height;
+$font-weight-h2: 'light';
+$font-weight-h2-bold: 'bold';
+
+$font-size-h3: 48px;
+$letter-spacing-h3: 0;
+$line-height-h3: $font-size-h3 * $line-height;
+$font-weight-h3: 'regular';
+$font-weight-h3-bold: 'bold';
+
+$font-size-h4: 36px;
+$letter-spacing-h4: 0.25px;
+$line-height-h4: $font-size-h4 * $line-height;
+$font-weight-h4: 'regular';
+$font-weight-h4-bold: 'bold';
+
+$font-size-h5: 24px;
+$letter-spacing-h5: 0;
+$line-height-h5: $font-size-h5 * $line-height;
+$font-weight-h5: 'regular';
+
+$font-size-h6: 20px;
+$letter-spacing-h6: 0.15px;
+$line-height-h6: $font-size-h6 * $line-height;
+$font-weight-h6: 'medium';
+
+$font-size-sub1: 16px;
+$letter-spacing-sub1: 0.15px;
+$line-height-sub1: $font-size-sub1 * $line-height;
+$font-weight-sub1: 'medium';
+
+$font-size-sub1-desktop: 20px;
+$letter-spacing-sub1-desktop: 0.1px;
+$line-height-sub1-desktop: $font-size-sub1-desktop * $line-height;
+$font-weight-sub1-desktop: 'medium';
+
+$font-size-body1: 16px;
+$letter-spacing-body1: 0.5px;
+$line-height-body1: $font-size-body1 * $line-height;
+$font-weight-body1: 'regular';
+
+$font-size-body2: 14px;
+$letter-spacing-body2: 0.25px;
+$line-height-body2: $font-size-body2 * $line-height;
+$font-weight-body2: 'regular';
+
+$font-size-body-desktop: 16px;
+$letter-spacing-body-desktop: 0px;
+$line-height-body-desktop: $font-size-body-desktop * $line-height;
+$font-weight-body-desktop: 'regular';
+
+$font-size-button: 14px;
+$letter-spacing-button: 1.25px;
+$line-height-button: $font-size-button * $line-height;
+$font-weight-button: 'medium';
+$text-transform-button: 'uppercase';
+
+$font-size-button-desktop: 32px;
+$letter-spacing-button-desktop: 1.25px;
+$line-height-button-desktop: $font-size-button-desktop * $line-height;
+$font-weight-button-desktop: 'regular';
 
 @font-face {
     font-family: ubuntu-regular;
@@ -77,4 +120,3 @@ $icon-container: 48px;
     font-family: ubuntu-bold;
     src: url(./font/Ubuntu-Bold.ttf);
   }
-

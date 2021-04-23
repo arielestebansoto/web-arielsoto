@@ -1,10 +1,18 @@
 * {
     font-family: ubuntu-regular;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.section-title {
-    color: -var(font-color);
+/* place holder */
+%body1 {
+    color: white;
 }
+
 .text {
-    letter-spacing: 0.25px;
+    @extend %body1;
+}
+.text-blog {
+    @extend %body1;
 }
