@@ -25,8 +25,7 @@
   margin: 0;
 }
 
-/* mixin para los breakpoitns */
-h1 {
+.jaime, .hero {
   color: #ffffff;
   font-size: 144px;
   letter-spacing: -1.5px;
@@ -34,18 +33,32 @@ h1 {
   font-weight: 600;
 }
 
-h1 {
-  font-weight: 500;
-}
-
-h1 {
-  font-weight: 400;
-}
-
-h1 {
+.jaime, .hero {
+  color: #ffffff;
+  font-size: 98px;
+  letter-spacing: -1.5px;
+  line-height: 137.2px;
   font-weight: 100;
 }
+@media only screen and (min-width: 768px) {
+  .jaime, .hero {
+    color: #ffffff;
+    font-size: 144px;
+    letter-spacing: -1.5px;
+    line-height: 201.6px;
+    font-weight: 600;
+  }
+}
 
+/* 
+%UI-element {
+    @mixin de breakpoint {
+        @mixin estilo {
+
+        }
+    }
+}
+*/
 .header {
   display: grid;
   grid-template-columns: 3fr 1fr;

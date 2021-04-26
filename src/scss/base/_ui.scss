@@ -4,12 +4,6 @@
     padding: 0;
     margin: 0;
 }
-/* mixin para los breakpoitns */
-@mixin breakpoint($width) {
-    @media only screen and (min-width: $width) {
-        @content
-    }
-}
 %hero {
     color: $color-font-white;
     font-size: $font-size-hero;
@@ -120,16 +114,51 @@
     line-height: $line-height-button-desktop;
     font-weight: $font-weight-button-desktop;
 }
+@mixin typography($color, $font-size, $letter-spacing, $line-height, $font-weight){
+    color: $color;
+    font-size: $font-size;
+    letter-spacing: $letter-spacing;
+    line-height: $line-height;
+    font-weight: $font-weight;
+}
+@mixin breakpoint($width) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
+@mixin hero {
+    color: $color-font-white;
+    font-size: $font-size-hero;
+    letter-spacing: $letter-spacing-hero;
+    line-height: $line-height-hero;
+    font-weight: $font-weight-hero;
+}
+@mixin h1 {
+    color: $color-font-white;
+    font-size: $font-size-h1;
+    letter-spacing: $letter-spacing-h1;
+    line-height: $line-height-h1;
+    font-weight: $font-weight-h1;
+}
+%hero {
+    @include h1;
+    @include breakpoint($breakpoint-tablet) {
+        @include hero;
+    }
+}
 
-h1 {
+.hero {
     @extend %hero;
 }
-h1{
-    font-weight: $medium;
+.jaime {
+    @extend %hero
 }
-h1 {
-    font-weight: $regular;
+/* 
+%UI-element {
+    @mixin de breakpoint {
+        @mixin estilo {
+        
+        }
+    }
 }
-h1 {
-    font-weight: $lighter;
-}
+*/
