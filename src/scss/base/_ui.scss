@@ -4,128 +4,13 @@
     padding: 0;
     margin: 0;
 }
-%hero {
-    color: $color-font-white;
-    font-size: $font-size-hero;
-    letter-spacing: $letter-spacing-hero;
-    line-height: $line-height-hero;
-    font-weight: $font-weight-hero;
-}
-%h1 {
-    color: $color-font-white;
-    font-size: $font-size-h1;
-    letter-spacing: $letter-spacing-h1;
-    line-height: $line-height-h1;
-    font-weight: $font-weight-h1;
-}
-%h2 {
-    color: $color-font-white;
-    font-size: $font-size-h2;
-    letter-spacing: $letter-spacing-h2;
-    line-height: $line-height-h2;
-    font-weight: $font-weight-h2;
-}
-%h2-bold {
-    @extend %h2;
-    font-weight: $font-weight-h2-bold;
-}
-%h3 {
-    color: $color-font-white;
-    font-size: $font-size-h3;
-    letter-spacing: $letter-spacing-h3;
-    line-height: $line-height-h3;
-    font-weight: $font-weight-h3;
-}
-%h3-bold {
-    @extend %h3;
-    font-weight: $font-weight-h3-bold;
-}
-%h4 {
-    color: $color-font-white;
-    font-size: $font-size-h4;
-    letter-spacing: $letter-spacing-h4;
-    line-height: $line-height-h4;
-    font-weight: $font-weight-h4;
-}
-%h4-bold {
-    @extend %h4;
-    font-weight: $font-weight-h4-bold;
-}
-%h5 {
-    color: $color-font-white;
-    font-size: $font-size-h5;
-    letter-spacing: $letter-spacing-h5;
-    line-height: $line-height-h5;
-    font-weight: $font-weight-h5;
-}
-%h6 {
-    color: $color-font-white;
-    font-size: $font-size-h6;
-    letter-spacing: $letter-spacing-h6;
-    line-height: $line-height-h6;
-    font-weight: $font-weight-h6;
-}
-%sub1 {
-    color: $color-font-white;
-    font-size: $font-size-sub1;
-    letter-spacing: $letter-spacing-sub1;
-    line-height: $line-height-sub1;
-    font-weight: $font-weight-sub1;
-}
-%sub1-desktop {
-    color: $color-font-white;
-    font-size: $font-size-sub1-desktop;
-    letter-spacing: $letter-spacing-sub1-desktop;
-    line-height: $line-height-sub1-desktop;
-    font-weight: $font-weight-sub1-desktop;
-}
-%body1 {
-    color: $color-font-white;
-    font-size: $font-size-body1;
-    letter-spacing: $letter-spacing-body1;
-    line-height: $line-height-body1;
-    font-weight: $font-weight-body1;
-}
-%body2 {
-    color: $color-font-white;
-    font-size: $font-size-body2;
-    letter-spacing: $letter-spacing-body2;
-    line-height: $line-height-body2;
-    font-weight: $font-weight-body2;
-}
-%body-desktop {
-    color: $color-font-white;
-    font-size: $font-size-body-desktop;
-    letter-spacing: $letter-spacing-body-desktop;
-    line-height: $line-height-body-desktop;
-    font-weight: $font-weight-body-desktop;
-}
-%button {
-    color: $color-font-white;
-    font-size: $font-size-button;
-    letter-spacing: $letter-spacing-button;
-    line-height: $line-height-button;
-    font-weight: $font-weight-button;
-}
-%button-desktop {
-    color: $color-font-white;
-    font-size: $font-size-button-desktop;
-    letter-spacing: $letter-spacing-button-desktop;
-    line-height: $line-height-button-desktop;
-    font-weight: $font-weight-button-desktop;
-}
-@mixin typography($color, $font-size, $letter-spacing, $line-height, $font-weight){
-    color: $color;
-    font-size: $font-size;
-    letter-spacing: $letter-spacing;
-    line-height: $line-height;
-    font-weight: $font-weight;
-}
 @mixin breakpoint($width) {
     @media only screen and (min-width: $width) {
         @content;
     }
 }
+
+/* --- FALTAN PLACEHOLDERS --- */
 @mixin hero {
     color: $color-font-white;
     font-size: $font-size-hero;
@@ -140,25 +25,192 @@
     line-height: $line-height-h1;
     font-weight: $font-weight-h1;
 }
+@mixin h2 {
+    color: $color-font-white;
+    font-size: $font-size-h2;
+    letter-spacing: $letter-spacing-h2;
+    line-height: $line-height-h2;
+    font-weight: $font-weight-h2;
+}
+@mixin h2-bold {
+    @include h2;
+    font-weight: $font-weight-h2-bold;
+}
+@mixin h3 {
+    color: $color-font-white;
+    font-size: $font-size-h3;
+    letter-spacing: $letter-spacing-h3;
+    line-height: $line-height-h3;
+    font-weight: $font-weight-h3;
+}
+@mixin h3-bold {
+    @include h3;
+    font-weight: $font-weight-h3-bold;
+}
+@mixin h4 {
+    color: $color-font-white;
+    font-size: $font-size-h4;
+    letter-spacing: $letter-spacing-h4;
+    line-height: $line-height-h4;
+    font-weight: $font-weight-h4;
+}
+@mixin h4-bold {
+    @include h4;
+    font-weight: $font-weight-h4-bold;
+}
+@mixin h5 {
+    color: $color-font-white;
+    font-size: $font-size-h5;
+    letter-spacing: $letter-spacing-h5;
+    line-height: $line-height-h5;
+    font-weight: $font-weight-h5;
+}
+@mixin h5-bold {
+    @include h5;
+    font-weight: $font-weight-h5-bold;
+}
+@mixin h6 {
+    color: $color-font-white;
+    font-size: $font-size-h6;
+    letter-spacing: $letter-spacing-h6;
+    line-height: $line-height-h6;
+    font-weight: $font-weight-h6;
+}
+@mixin sub1 {
+    color: $color-font-white;
+    font-size: $font-size-sub1;
+    letter-spacing: $letter-spacing-sub1;
+    line-height: $line-height-sub1;
+    font-weight: $font-weight-sub1;
+}
+@mixin sub1-desktop {
+    color: $color-font-white;
+    font-size: $font-size-sub1-desktop;
+    letter-spacing: $letter-spacing-sub1-desktop;
+    line-height: $line-height-sub1-desktop;
+    font-weight: $font-weight-sub1-desktop;
+}
+@mixin body1 {
+    color: $color-font-white;
+    font-size: $font-size-body1;
+    letter-spacing: $letter-spacing-body1;
+    line-height: $line-height-body1;
+    font-weight: $font-weight-body1;
+}
+@mixin body2 {
+    color: $color-font-white;
+    font-size: $font-size-body2;
+    letter-spacing: $letter-spacing-body2;
+    line-height: $line-height-body2;
+    font-weight: $font-weight-body2;
+}
+@mixin body-desktop {
+    color: $color-font-white;
+    font-size: $font-size-body-desktop;
+    letter-spacing: $letter-spacing-body-desktop;
+    line-height: $line-height-body-desktop;
+    font-weight: $font-weight-body-desktop;
+}
+@mixin button {
+    color: $color-font-white;
+    font-size: $font-size-button;
+    letter-spacing: $letter-spacing-button;
+    line-height: $line-height-button;
+    font-weight: $font-weight-button;
+}
+@mixin button-desktop {
+    color: $color-font-white;
+    font-size: $font-size-button-desktop;
+    letter-spacing: $letter-spacing-button-desktop;
+    line-height: $line-height-button-desktop;
+    font-weight: $font-weight-button-desktop;
+}
 %hero {
-    @include h1;
+    @include h2-bold;
     @include breakpoint($breakpoint-tablet) {
         @include hero;
     }
 }
-
-.hero {
-    @extend %hero;
+%hero-subtitle {
+    @include h5-bold;
+    @include breakpoint($breakpoint-tablet) {
+        @include h3-bold
+    }
 }
-.jaime {
-    @extend %hero
+%nav {
+    @include body1;
+}
+%menu-links {
+    @include h4-bold;
+    @include breakpoint($breakpoint-tablet) {
+        @include h3-bold;
+    }
+}
+%section-title {
+    @include h4-bold;
+    @include breakpoint($breakpoint-tablet) {
+        @include h2-bold;
+    }
+}
+%section-subtitle {
+    @include h5;
+    @include breakpoint($breakpoint-tablet) {
+        @include h3;
+    }
+}
+%text {
+    @include body1;
+    @include breakpoint($breakpoint-tablet) {
+        @include body-desktop;
+    }
+}
+%button {
+    @include button;
+    @include breakpoint($breakpoint-tablet) {
+        @include button-desktop;
+    }
+}
+%card-title {
+    @include sub1;
+    @include breakpoint($breakpoint-tablet) {
+        @include sub1-desktop;
+    }
+}
+%blog-title {
+    @include h6;
+    @include breakpoint($breakpoint-tablet) {
+        @include h3;
+    }
+}
+%blog-text {
+    @extend %text;
+}
+%blog-date {
+    @include body2;
+    @include breakpoint($breakpoint-tablet) {
+        @include h6;
+    }
+}
+%blog-extract {
+    @include sub1;
+    @include breakpoint($breakpoint-tablet) {
+        @include h5-bold;
+    }
+}
+%modal-title {
+    @include h5-bold;
+    @include breakpoint($breakpoint-tablet) {
+        @include h3;
+    }
 }
 /* 
-%UI-element {
-    @mixin de breakpoint {
-        @mixin estilo {
-        
+.selector {
+    %placeholder {
+        @mixin default-style
+        @mixin de breakpoint {
+            @mixin responsive-style {
+            }
         }
-    }
+}
 }
 */

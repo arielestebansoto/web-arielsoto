@@ -25,14 +25,6 @@ $icon-size: 24px;
 $icon-container: 48px;
 $line-height: 1.4;
 
-$font-size-nav-mobile: 16px;
-$font-size-nav-desktop: 24px;
-$font-size-nav-tablet: $font-size-nav-desktop;
-
-$letter-spacing-nav-menu-mobile: 0.5px;
-$letter-spacing-nav-menu-desktop: $letter-spacing-nav-menu-mobile;
-$letter-spacing-nav-menu-tablet: $letter-spacing-nav-menu-desktop;
-
 $regular: 400;
 $lighter: 100;
 $medium: 500;
@@ -70,6 +62,7 @@ $font-size-h5: 24px;
 $letter-spacing-h5: 0;
 $line-height-h5: $font-size-h5 * $line-height;
 $font-weight-h5: $regular;
+$font-weight-h5-bold: $bold;
 
 $font-size-h6: 20px;
 $letter-spacing-h6: 0.15px;

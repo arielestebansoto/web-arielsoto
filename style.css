@@ -25,38 +25,16 @@
   margin: 0;
 }
 
-.jaime, .hero {
-  color: #ffffff;
-  font-size: 144px;
-  letter-spacing: -1.5px;
-  line-height: 201.6px;
-  font-weight: 600;
-}
-
-.jaime, .hero {
-  color: #ffffff;
-  font-size: 98px;
-  letter-spacing: -1.5px;
-  line-height: 137.2px;
-  font-weight: 100;
-}
-@media only screen and (min-width: 768px) {
-  .jaime, .hero {
-    color: #ffffff;
-    font-size: 144px;
-    letter-spacing: -1.5px;
-    line-height: 201.6px;
-    font-weight: 600;
-  }
-}
-
+/* --- FALTAN PLACEHOLDERS --- */
 /* 
-%UI-element {
-    @mixin de breakpoint {
-        @mixin estilo {
-
+.selector {
+    %placeholder {
+        @mixin default-style
+        @mixin de breakpoint {
+            @mixin responsive-style {
+            }
         }
-    }
+}
 }
 */
 .header {
