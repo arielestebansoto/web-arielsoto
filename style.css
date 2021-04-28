@@ -37,9 +37,60 @@
 }
 }
 */
-.nav-container {
+.nav {
+  display: grid;
+  grid-template-columns: repeat(4, 4fr);
+  position: fixed;
+  top: 0;
   width: 100%;
   height: 72px;
+  padding: 0 16px;
+  column-gap: 32px;
+  background: rgba(0, 0, 0, 0);
+}
+@media only screen and (min-width: 768px) {
+  .nav {
+    grid-template-columns: repeat(4, 4fr);
+    margin: 0 24px;
+    column-gap: 32px;
+  }
+}
+
+.nav-icon {
+  grid-column: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.nav-icon span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.nav-menu {
+  grid-column: 4/5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-menu span {
+  color: #ffffff;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  padding-top: 71px;
+  background-color: #1d1d1d;
 }
 
 /* @import './organisms/_header';
