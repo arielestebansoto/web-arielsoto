@@ -1,14 +1,11 @@
 .nav {
     display: grid;
-    grid-template-columns: repeat(4, 4fr);
+    @extend %template-columns-mobile-1;
     position: fixed;
     top: 0;
     
     width: 100%;
     height: $height-nav;
-    padding: 0 $margin-grid-mobile;
-    column-gap: $gutter-grid-mobile;
-
     background: rgba(0, 0, 0, 0);
     @include breakpoint($breakpoint-tablet) {
         grid-template-columns: repeat(4, 4fr);

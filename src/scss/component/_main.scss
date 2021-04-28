@@ -1,7 +1,12 @@
 .main {
+    display: grid;
+    @extend %template-columns-mobile-1;
     width: 100%;
     height: 100vh;
-
-    padding-top: $height-nav - 1px;
+    padding-top: $height-nav;
     background-color: $color-dark;
+}
+.skills {
+    height: 100vh;
+    background-color: palevioletred
 }
