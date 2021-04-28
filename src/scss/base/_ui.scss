@@ -3,11 +3,17 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    color: $color-font-white;
 }
 %template-columns-mobile-1 {
     grid-template-columns: repeat(4, 4fr);
     padding-inline: $margin-grid-mobile;
     column-gap: $gutter-grid-mobile;
+}
+%template-rows-mobile-hero {
+    grid-template-rows: repeat(7, 1fr);
+    padding-block-start: $height-nav;
+    row-gap: $gutter-grid-mobile;
 }
 @mixin breakpoint($width) {
     @media only screen and (min-width: $width) {
@@ -29,6 +35,10 @@
     letter-spacing: $letter-spacing-h1;
     line-height: $line-height-h1;
     font-weight: $font-weight-h1;
+}
+@mixin h1-bold {
+    @include h1;
+    font-weight: $bold;
 }
 @mixin h2 {
     color: $color-font-white;
@@ -133,7 +143,7 @@
 %hero {
     @include h2-bold;
     @include breakpoint($breakpoint-tablet) {
-        @include hero;
+        @include h1-bold;
     }
 }
 %hero-subtitle {
