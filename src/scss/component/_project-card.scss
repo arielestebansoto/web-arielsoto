@@ -1,0 +1,33 @@
+@use '../base/var';
+.project-container {
+    display: grid;
+    row-gap: var.$spacing-little;
+}
+.card-project {
+    display: flex;
+    justify-content: space-evenly;
+
+    block-size: 100%;
+    inline-size: 100%;
+}
+.card-project__image {
+    block-size: var.$card-block-size;
+    inline-size: var.$card-inline-size;
+}
+.card-project__image img {
+    block-size: 100%;
+    inline-size: 100%;
+    object-fit: cover;
+}
+.card-project__info {
+    display: flex;
+    block-size: 100%;
+    min-inline-size: var.$card-info-min-inline-size;
+    max-inline-size: var.$card-info-min-inline-size;
+    justify-content: center;
+    align-items: center;
+}
+.card-project__info a {
+    @extend %style-none;
+    @extend %card-title;
+}

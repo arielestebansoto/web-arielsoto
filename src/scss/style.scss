@@ -1,3 +1,5 @@
-@import './base/var';
-@import 'component/nav';
-@import 'component/main'; 
+@use './base/var';
+@use 'component/nav';
+@use 'component/main';
+@use 'component/project-card';
+ 

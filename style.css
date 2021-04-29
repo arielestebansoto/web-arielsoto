@@ -6,7 +6,6 @@
   font-weight: 100;
   font-weight: 600;
 }
-
 @media only screen and (min-width: 768px) {
   .main-title h1 {
     color: #ffffff;
@@ -17,6 +16,7 @@
     font-weight: 600;
   }
 }
+
 .main-subtitle h1 {
   color: #ffffff;
   font-size: 24px;
@@ -25,7 +25,6 @@
   font-weight: 400;
   font-weight: 600;
 }
-
 @media only screen and (min-width: 768px) {
   .main-subtitle h1 {
     color: #ffffff;
@@ -36,6 +35,7 @@
     font-weight: 600;
   }
 }
+
 .section-main-title {
   color: #ffffff;
   font-size: 36px;
@@ -44,7 +44,6 @@
   font-weight: 400;
   font-weight: 600;
 }
-
 @media only screen and (min-width: 768px) {
   .section-main-title {
     color: #ffffff;
@@ -55,6 +54,7 @@
     font-weight: 600;
   }
 }
+
 .section-main-subtitle {
   color: #ffffff;
   font-size: 24px;
@@ -62,7 +62,6 @@
   line-height: 33.6px;
   font-weight: 400;
 }
-
 @media only screen and (min-width: 768px) {
   .section-main-subtitle {
     color: #ffffff;
@@ -72,6 +71,24 @@
     font-weight: 400;
   }
 }
+
+.card-project__info a {
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0.15px;
+  line-height: 22.4px;
+  font-weight: 500;
+}
+@media only screen and (min-width: 768px) {
+  .card-project__info a {
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0.1px;
+    line-height: 28px;
+    font-weight: 500;
+  }
+}
+
 @font-face {
   font-family: ubuntu;
   src: url(./font/Ubuntu-Regular.ttf);
@@ -112,118 +129,8 @@
   color: #ffffff;
 }
 
-.main-title h1 {
-  color: #ffffff;
-  font-size: 60px;
-  letter-spacing: -0.5px;
-  line-height: 84px;
-  font-weight: 100;
-  font-weight: 600;
-}
-
-@media only screen and (min-width: 768px) {
-  .main-title h1 {
-    color: #ffffff;
-    font-size: 98px;
-    letter-spacing: -1.5px;
-    line-height: 137.2px;
-    font-weight: 100;
-    font-weight: 600;
-  }
-}
-.main-subtitle h1 {
-  color: #ffffff;
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: 33.6px;
-  font-weight: 400;
-  font-weight: 600;
-}
-
-@media only screen and (min-width: 768px) {
-  .main-subtitle h1 {
-    color: #ffffff;
-    font-size: 48px;
-    letter-spacing: 0;
-    line-height: 67.2px;
-    font-weight: 400;
-    font-weight: 600;
-  }
-}
-.section-main-title {
-  color: #ffffff;
-  font-size: 36px;
-  letter-spacing: 0.25px;
-  line-height: 50.4px;
-  font-weight: 400;
-  font-weight: 600;
-}
-
-@media only screen and (min-width: 768px) {
-  .section-main-title {
-    color: #ffffff;
-    font-size: 60px;
-    letter-spacing: -0.5px;
-    line-height: 84px;
-    font-weight: 100;
-    font-weight: 600;
-  }
-}
-.section-main-subtitle {
-  color: #ffffff;
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: 33.6px;
-  font-weight: 400;
-}
-
-@media only screen and (min-width: 768px) {
-  .section-main-subtitle {
-    color: #ffffff;
-    font-size: 48px;
-    letter-spacing: 0;
-    line-height: 67.2px;
-    font-weight: 400;
-  }
-}
-@font-face {
-  font-family: ubuntu;
-  src: url(./font/Ubuntu-Regular.ttf);
-  font-weight: 400;
-}
-@font-face {
-  font-family: ubuntu;
-  src: url(./font/Ubuntu-Light.ttf);
-  font-weight: 100;
-}
-@font-face {
-  font-family: ubuntu;
-  src: url(./font/Ubuntu-Medium.ttf);
-  font-weight: 500;
-}
-@font-face {
-  font-family: ubuntu;
-  src: url(./font/Ubuntu-Bold.ttf);
-  font-weight: 600;
-}
-.main, .nav {
-  grid-template-columns: repeat(4, 4fr);
-  padding-inline: 32px;
-  column-gap: 32px;
-}
-
-.main {
-  grid-template-rows: repeat(7, 1fr);
-  padding-block-start: 72px;
-  row-gap: 32px;
-}
-
-* {
-  font-family: ubuntu;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  color: #ffffff;
+.card-project__info a {
+  text-decoration: none;
 }
 
 .nav {
@@ -270,120 +177,6 @@
 }
 
 .nav-menu span {
-  color: #ffffff;
-}
-
-.main-title h1 {
-  color: #ffffff;
-  font-size: 60px;
-  letter-spacing: -0.5px;
-  line-height: 84px;
-  font-weight: 100;
-  font-weight: 600;
-}
-
-@media only screen and (min-width: 768px) {
-  .main-title h1 {
-    color: #ffffff;
-    font-size: 98px;
-    letter-spacing: -1.5px;
-    line-height: 137.2px;
-    font-weight: 100;
-    font-weight: 600;
-  }
-}
-.main-subtitle h1 {
-  color: #ffffff;
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: 33.6px;
-  font-weight: 400;
-  font-weight: 600;
-}
-
-@media only screen and (min-width: 768px) {
-  .main-subtitle h1 {
-    color: #ffffff;
-    font-size: 48px;
-    letter-spacing: 0;
-    line-height: 67.2px;
-    font-weight: 400;
-    font-weight: 600;
-  }
-}
-.section-main-title {
-  color: #ffffff;
-  font-size: 36px;
-  letter-spacing: 0.25px;
-  line-height: 50.4px;
-  font-weight: 400;
-  font-weight: 600;
-}
-
-@media only screen and (min-width: 768px) {
-  .section-main-title {
-    color: #ffffff;
-    font-size: 60px;
-    letter-spacing: -0.5px;
-    line-height: 84px;
-    font-weight: 100;
-    font-weight: 600;
-  }
-}
-.section-main-subtitle {
-  color: #ffffff;
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: 33.6px;
-  font-weight: 400;
-}
-
-@media only screen and (min-width: 768px) {
-  .section-main-subtitle {
-    color: #ffffff;
-    font-size: 48px;
-    letter-spacing: 0;
-    line-height: 67.2px;
-    font-weight: 400;
-  }
-}
-@font-face {
-  font-family: ubuntu;
-  src: url(./font/Ubuntu-Regular.ttf);
-  font-weight: 400;
-}
-@font-face {
-  font-family: ubuntu;
-  src: url(./font/Ubuntu-Light.ttf);
-  font-weight: 100;
-}
-@font-face {
-  font-family: ubuntu;
-  src: url(./font/Ubuntu-Medium.ttf);
-  font-weight: 500;
-}
-@font-face {
-  font-family: ubuntu;
-  src: url(./font/Ubuntu-Bold.ttf);
-  font-weight: 600;
-}
-.nav, .main {
-  grid-template-columns: repeat(4, 4fr);
-  padding-inline: 32px;
-  column-gap: 32px;
-}
-
-.main {
-  grid-template-rows: repeat(7, 1fr);
-  padding-block-start: 72px;
-  row-gap: 32px;
-}
-
-* {
-  font-family: ubuntu;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
   color: #ffffff;
 }
 
@@ -437,4 +230,36 @@
   inline-size: 100%;
   block-size: 100%;
   background-color: grey;
+}
+
+.project-container {
+  display: grid;
+  row-gap: 6px;
+}
+
+.card-project {
+  display: flex;
+  justify-content: space-evenly;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.card-project__image {
+  block-size: 82px;
+  inline-size: 125px;
+}
+
+.card-project__image img {
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+}
+
+.card-project__info {
+  display: flex;
+  block-size: 100%;
+  min-inline-size: 150px;
+  max-inline-size: 150px;
+  justify-content: center;
+  align-items: center;
 }

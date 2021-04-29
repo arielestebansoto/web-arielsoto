@@ -1,0 +1,15 @@
+-var imageSrc = './img/project/'
+-var formatJpg = '.jpg'
+mixin card-project(title,image)
+    .card-project 
+        .card-project__image
+            img(src=`${imageSrc}${image}${formatJpg}`, alt="none")
+        .card-project__info
+            a(href="#").card-project--title #{title}
+
+section.section-main.section-project
+    h1.section-main-title Projects
+    .project-container
+        +card-project('El camisa Perro El camisa Perro', '1')
+        +card-project('bla', '1')
+        +card-project('yggg yggg', '1')
