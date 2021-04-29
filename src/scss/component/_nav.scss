@@ -1,3 +1,4 @@
+@use './base/var';
 .nav {
     display: grid;
     @extend %template-columns-mobile-1;
@@ -6,12 +7,12 @@
     top: 0;
     
     inline-size: 100%;
-    block-size: $height-nav;
+    block-size: var.$height-nav;
     background: rgba(0, 0, 0, 0);
-    @include breakpoint($breakpoint-tablet) {
+    @include var.breakpoint(var.$breakpoint-tablet) {
         grid-template-columns: repeat(4, 4fr);
-        margin: 0 $margin-grid-tablet;
-        column-gap: $gutter-grid-tablet;
+        margin: 0 var.$margin-grid-tablet;
+        column-gap: var.$gutter-grid-tablet;
     }
 }
 .nav-icon {
@@ -20,18 +21,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $color-font-white;
+    color: var.$color-font-white;
 }
 .nav-icon span {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    width: $icon-container;
-    height: $icon-container;
+    width: var.$icon-container;
+    height: var.$icon-container;
     
     text-align: center;
-    font-size: $icon-size;
+    font-size: var.$icon-size;
     text-transform: uppercase;
 }
 .nav-menu {
@@ -42,5 +43,5 @@
 
 }
 .nav-menu span {
-    color: $color-font-white   
+    color: var.$color-font-white   
 }
