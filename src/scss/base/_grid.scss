@@ -1,0 +1,12 @@
+@use 'size';
+
+%template-columns-mobile-1 {
+    grid-template-columns: repeat(4, 4fr);
+    padding-inline: size.$margin-grid-mobile;
+    column-gap: size.$gutter-grid-mobile;
+}
+%template-rows-mobile-hero {
+    grid-template-rows: repeat(7, 1fr);
+    padding-block-start: size.$height-nav;
+    row-gap: size.$gutter-grid-mobile;
+}

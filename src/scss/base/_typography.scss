@@ -1,37 +1,9 @@
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 1024px;
-
-$color-dark: #1d1d1d;
-$color-white: #ffffff;
-
-$color-font-white: $color-white;
-
-$height-nav: 72px;
-
-/* CHECK? */
-$margin-grid-mobile: 32px;
-$margin-grid-tablet: 48px;
-$margin-grid-desktop: 64px;
-
-$margin-post-mobile: 64px;
-
-$gutter-grid-mobile: 32px;
-$gutter-grid-tablet: 32px;
-$gutter-grid-desktop: 32px;
-
-$spacing-little: 6px;
-$spacing-small: 12px;
-$spacing-medium: 24px;
-$spacing-big: 48px;
-
-$icon-size: 24px;
-$icon-container: 48px;
-$line-height: 1.4;
-
 $regular: 400;
 $lighter: 100;
 $medium: 500;
 $bold: 600;
+
+$line-height: 1.4;
 
 $font-size-hero: 144px;
 $letter-spacing-hero: -1.5px;
@@ -107,24 +79,3 @@ $font-size-button-desktop: 32px;
 $letter-spacing-button-desktop: 1.25px;
 $line-height-button-desktop: $font-size-button-desktop * $line-height;
 $font-weight-button-desktop: $regular;
-
-@font-face {
-    font-family: ubuntu;
-    src: url(./font/Ubuntu-Regular.ttf);
-    font-weight: $regular;
-  }
-  @font-face {
-    font-family: ubuntu;
-    src: url(./font/Ubuntu-Light.ttf);
-    font-weight: $lighter;
-  }
-  @font-face {
-    font-family: ubuntu;
-    src: url(./font/Ubuntu-Medium.ttf);
-    font-weight: $medium;
-  }
-  @font-face {
-    font-family: ubuntu;
-    src: url(./font/Ubuntu-Bold.ttf);
-    font-weight: 600;
-  }
