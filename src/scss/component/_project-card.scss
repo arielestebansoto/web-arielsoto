@@ -23,7 +23,7 @@
     display: flex;
     block-size: 100%;
     min-inline-size: var.$card-info-min-inline-size;
-    max-inline-size: var.$card-info-min-inline-size;
+    max-inline-size: var.$card-info-max-inline-size;
     justify-content: center;
     align-items: center;
 }
