@@ -1,0 +1,55 @@
+@use '../base/var';
+.menu {
+    position: absolute;
+    z-index: 50;
+
+    inline-size: 100%;
+    block-size: 100%;
+    
+    padding-block-start: var.$height-nav;
+    padding-inline: var.$margin-grid-mobile;
+
+    background: var.$color-dark;
+}
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    block-size: 50%;
+    padding-block-end: var.$spacing-big;
+}
+.menu-list li {
+    @extend %list-style;
+}
+.menu-link {
+    @extend %style-none;
+    @extend %menu-link;
+    text-transform: uppercase;
+}
+.menu-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+.about {
+    text-align: right;
+}
+.about a {
+    @extend %style-none;
+    @extend %menu-subtitle;
+}
+.social-media {
+    display: flex;
+    block-size: var.$icon-container * 1.5;
+    justify-content: flex-end;
+    align-items: center;
+}
+.icon {
+    inline-size: var.$icon-size;
+    block-size: var.$icon-size;
+    background-color: grey;
+    margin: var.$icon-container / 4;
+}

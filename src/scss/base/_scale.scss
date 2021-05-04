@@ -135,10 +135,16 @@
 %nav {
     @include body1;
 }
-%menu-links {
+%menu-link {
     @include h4-bold;
     @include breakpoint.breakpoint(breakpoint.$breakpoint-tablet) {
         @include h3-bold;
+    }
+}
+%menu-subtitle {
+    @include h5-bold;
+    @include breakpoint.breakpoint(breakpoint.$breakpoint-tablet) {
+        @include h3;
     }
 }
 %section-title {
@@ -190,11 +196,5 @@
     @include sub1;
     @include breakpoint.breakpoint(breakpoint.$breakpoint-tablet) {
         @include h5-bold;
-    }
-}
-%modal-title {
-    @include h5-bold;
-    @include breakpoint.breakpoint(breakpoint.$breakpoint-tablet) {
-        @include h3;
     }
 }
