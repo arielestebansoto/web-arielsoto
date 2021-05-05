@@ -28,14 +28,13 @@
     @extend %menu-link;
     text-transform: uppercase;
 }
-.menu-social {
+.menu-contact {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    
+    text-align: right;
 }
 .about {
-    text-align: right;
+    margin-block-end: var.$spacing-small;
 }
 .about a {
     @extend %style-none;
@@ -43,13 +42,34 @@
 }
 .social-media {
     display: flex;
-    block-size: var.$icon-container * 1.5;
     justify-content: flex-end;
     align-items: center;
+
+    block-size: var.$icon-container * 1.5;
+    margin-block-end: var.$spacing-small;
+
 }
 .icon {
     inline-size: var.$icon-size;
     block-size: var.$icon-size;
     background-color: grey;
     margin: var.$icon-container / 4;
+}
+.contact-me {
+    block-size: 100%;
+}
+.contact-me a {
+    @extend %style-none;
+    @extend %button;
+    display: inline-block;
+    padding: var.$button-inline-size / 4 ;
+}
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.contact-me span {
+    @extend %text;
+    margin-block-end: var.$spacing-medium;
 }
