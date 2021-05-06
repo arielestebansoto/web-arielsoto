@@ -37,12 +37,36 @@
     text-transform: uppercase;
 }
 .nav-menu {
-    grid-column: 4 / 5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    grid-column: 4 / 5;     
+    position: relative;
+}
+.nav-menu input,
+.nav-menu span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.nav-menu input {
+    z-index: 50;
 
+    inline-size: var.$icon-container;
+    block-size: var.$icon-container;
+    opacity: 0;
+    cursor: pointer;
 }
 .nav-menu span {
-    color: var.$color-font-white   
+    color: var.$color-font-white;
 }
+.nav-menu span:nth-child(3) {
+    opacity: 0;
+}
+/* hamburguermenu */
+.nav-menu input:checked ~ span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-menu input:checked ~ span:nth-child(3) {
+    opacity: 1;
+}
+ 

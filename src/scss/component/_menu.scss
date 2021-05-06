@@ -1,10 +1,11 @@
 @use '../base/var';
 .menu {
+    display: none;
     position: absolute;
     z-index: 50;
 
-    inline-size: 100%;
-    block-size: 100%;
+    inline-size: 100vw;
+    block-size: 100vh;
     
     padding-block-start: var.$height-nav;
     padding-inline: var.$margin-grid-mobile;
@@ -47,7 +48,6 @@
 
     block-size: var.$icon-container * 1.5;
     margin-block-end: var.$spacing-small;
-
 }
 .icon {
     inline-size: var.$icon-size;

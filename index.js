@@ -1,20 +1,19 @@
 /* ----- TOGGLE MENU ----- */
-const iconMenu = document.querySelector('.icon-menu')
-const nav = document.querySelector('.nav')
-iconMenu.innerHTML = `<svg height="384pt" viewBox="0 -53 384 384" width="384pt" xmlns="http://www.w3.org/2000/svg" id="fi_1828859"><path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"></path><path d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"></path><path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"></path></svg>`
+const checkbox = document.querySelector('#checkbox')
+const menu = document.querySelector('.menu')
 
-iconMenu.addEventListener('click', toggleMenu)
+checkbox.addEventListener('click', toggleMenu)
 
 function toggleMenu() {
-    if (nav.style.display === 'flex') {
-        nav.style.display = 'none'
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none'
     } else {
-        nav.style.display = 'flex'
+        menu.style.display = 'block'
     }
 }
 
 /* ----- APPEND QUICKPORTFOLIO IMAGES ----- */
-const quickGalery = document.querySelector('.quickgalery')
+/* const quickGalery = document.querySelector('.quickgalery')
 const imgDIR = './img/quickgalery/' 
 const imgURL = 'quickgaleryimages-'
 const imgFORMAT = '.jpg'
@@ -34,3 +33,4 @@ for (i = 0; i < displayPhotos; i++) {
 }
 /* ----- APPEND PORTFOLIO AV ----- */
 /* ----- MENU SOCIAL SVG INLINE ----- */
+ 

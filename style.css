@@ -250,13 +250,40 @@
 
 .nav-menu {
   grid-column: 4/5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+}
+
+.nav-menu input,
+.nav-menu span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav-menu input {
+  z-index: 50;
+  inline-size: 48px;
+  block-size: 48px;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .nav-menu span {
   color: #ffffff;
+}
+
+.nav-menu span:nth-child(3) {
+  opacity: 0;
+}
+
+/* hamburguermenu */
+.nav-menu input:checked ~ span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-menu input:checked ~ span:nth-child(3) {
+  opacity: 1;
 }
 
 .main {
@@ -344,10 +371,11 @@
 }
 
 .menu {
+  display: none;
   position: absolute;
   z-index: 50;
-  inline-size: 100%;
-  block-size: 100%;
+  inline-size: 100vw;
+  block-size: 100vh;
   padding-block-start: 72px;
   padding-inline: 32px;
   background: #1d1d1d;
