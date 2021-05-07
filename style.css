@@ -413,11 +413,11 @@
   margin-block-end: 12px;
 }
 
-.icon {
+.icon-social {
   inline-size: 24px;
   block-size: 24px;
-  background-color: grey;
   margin: 12px;
+  fill: grey;
 }
 
 .contact-me {

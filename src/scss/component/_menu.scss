@@ -51,11 +51,11 @@
     block-size: var.$icon-container * 1.5;
     margin-block-end: var.$spacing-small;
 }
-.icon {
+.icon-social {
     inline-size: var.$icon-size;
     block-size: var.$icon-size;
-    background-color: grey;
     margin: var.$icon-container / 4;
+    fill: grey;
 }
 .contact-me {
     block-size: 100%;
