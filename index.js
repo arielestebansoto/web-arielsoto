@@ -5,10 +5,10 @@ const menu = document.querySelector('.menu')
 checkbox.addEventListener('click', toggleMenu)
 
 function toggleMenu() {
-    if (menu.style.display === 'block') {
-        menu.style.display = 'none'
+    if (menu.style.transform == "translate(0px, 0px)") {
+        menu.style.transform = "translate(0, -100%)"
     } else {
-        menu.style.display = 'block'
+    menu.style.transform = "translate(0px, 0px)"
     }
 }
 

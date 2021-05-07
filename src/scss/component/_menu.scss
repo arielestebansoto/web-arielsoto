@@ -1,9 +1,11 @@
 @use '../base/var';
 .menu {
-    display: none;
     position: absolute;
     z-index: 50;
 
+    transform: translate(0, -100%);
+    transition: transform .5s ease-out;
+    
     inline-size: 100vw;
     block-size: 100vh;
     

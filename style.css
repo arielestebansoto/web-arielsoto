@@ -271,13 +271,13 @@
 
 .nav-menu span {
   color: #ffffff;
+  transition: opacity 1s ease-in-out;
 }
 
 .nav-menu span:nth-child(3) {
   opacity: 0;
 }
 
-/* hamburguermenu */
 .nav-menu input:checked ~ span:nth-child(2) {
   opacity: 0;
 }
@@ -371,9 +371,10 @@
 }
 
 .menu {
-  display: none;
   position: absolute;
   z-index: 50;
+  transform: translate(0, -100%);
+  transition: transform 0.5s ease-out;
   inline-size: 100vw;
   block-size: 100vh;
   padding-block-start: 72px;
