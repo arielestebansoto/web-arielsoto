@@ -1,0 +1,15 @@
+extend ./component/index-template
+mixin card-song(title, src)
+block content 
+    section.music
+        .music-hero
+            .music-image
+            h1.music-title
+        .music-song
+            h1.music-title
+            .card-song
+                .card-song-image 
+                    img(src="/", alt="")
+                .card-song-title
+                .card-song-play
+                    .icon-play
