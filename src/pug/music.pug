@@ -1,15 +1,18 @@
 extend ./component/index-template
-mixin card-song(title, src)
+mixin card-song(song, src)
+    -var urlIconPlay = './icon/music/icon-play.png'
+    .card-song
+        .card-song-thumbnail
+            img(src=`${urlThumbnail}${src}`, alt="")
+        h1.card-song-title #{song}
+        .card-song-play
+            img(src= urlIconPlay, alt="")
 block content 
+    -var artist = 'Stephen Soto'
+    -var urlThumbnail = './img/music/song/'
     section.music
         .music-hero
-            .music-image
-            h1.music-title
-        .music-song
-            h1.music-title
-            .card-song
-                .card-song-image 
-                    img(src="/", alt="")
-                .card-song-title
-                .card-song-play
-                    .icon-play
+            h1.music-hero-title #{artist}
+        .music-list
+            h1.music-title #{artist}
+            +card-song('Misterio', 'song1.jpg')
