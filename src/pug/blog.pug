@@ -4,6 +4,8 @@ mixin blog-entry
         h1.entry-title Title 
         p.entry-extract Lorem ipsum dolor sit amet consectetur adipisicing elit.
         span.date 1 Ene 2021.
+block style
+    +head('Blog')
 block content
     section.section.section-blog
         h1.section-main-title Blog

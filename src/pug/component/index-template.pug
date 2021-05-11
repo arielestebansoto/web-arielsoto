@@ -1,6 +1,11 @@
+mixin head(title="Ariel Soto",url="./style.css")
+    title=  title
+    link(rel="stylesheet", href= url)
+
 doctype html
 html(lang="en")
-    include ./head.pug 
+    include ./head.pug
+        block style
     body.body
         include ./nav
         include ./menu 

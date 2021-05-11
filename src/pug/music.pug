@@ -7,6 +7,8 @@ mixin card-song(song, src)
         h1.card-song-title #{song}
         .card-song-play
             img(src= urlIconPlay, alt="")
+block style
+    +head('Music')
 block content 
     -var artist = 'Stephen Soto'
     -var urlThumbnail = './img/music/song/'
