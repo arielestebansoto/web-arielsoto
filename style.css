@@ -160,6 +160,58 @@
   }
 }
 
+.entry-title {
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0.15px;
+  line-height: 28px;
+  font-weight: 500;
+}
+@media only screen and (min-width: 768px) {
+  .entry-title {
+    color: #ffffff;
+    font-size: 48px;
+    letter-spacing: 0;
+    line-height: 67.2px;
+    font-weight: 400;
+  }
+}
+
+.date {
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  line-height: 19.6px;
+  font-weight: 400;
+}
+@media only screen and (min-width: 768px) {
+  .date {
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0.15px;
+    line-height: 28px;
+    font-weight: 500;
+  }
+}
+
+.entry-extract {
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0.15px;
+  line-height: 22.4px;
+  font-weight: 500;
+}
+@media only screen and (min-width: 768px) {
+  .entry-extract {
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 33.6px;
+    font-weight: 400;
+    font-weight: 600;
+  }
+}
+
 @font-face {
   font-family: ubuntu;
   src: url(./font/Ubuntu-Regular.ttf);
@@ -192,6 +244,13 @@
   row-gap: 32px;
 }
 
+.section {
+  inline-size: 100%;
+  min-block-size: 100vh;
+  padding-block-start: 72px;
+  padding-inline: 32px;
+}
+
 * {
   font-family: ubuntu;
   box-sizing: border-box;
@@ -200,7 +259,7 @@
   color: #ffffff;
 }
 
-.menu-link, .about a, .contact-me a, .card-project__info a, .nav-icon a {
+.blog-entry, .menu-link, .about a, .contact-me a, .card-project__info a, .nav-icon a {
   text-decoration: none;
 }
 
@@ -510,4 +569,26 @@
   inline-size: 24px;
   block-size: 24px;
   filter: invert(1);
+}
+
+.blog-entries {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.blog-entry {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  inline-size: 100%;
+  block-size: 125px;
+  margin-block-end: 24px;
+}
+
+.entry-extract {
+  text-align: center;
+}
+
+.date {
+  text-align: right;
 }

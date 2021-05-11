@@ -1,0 +1,28 @@
+@use '../base/var';
+.section {
+    @extend %section;   
+}
+.blog-entries {
+    inline-size: 100%;
+    block-size: 100%;
+}
+.blog-entry {
+    @extend %style-none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    inline-size: 100%;
+    block-size: var.$height-blog-entry;
+    margin-block-end: var.$spacing-medium;
+}
+.entry-title{
+    @extend %blog-title;
+}
+.entry-extract {
+    @extend %blog-extract;
+    text-align: center;
+}
+.date {
+    @extend %blog-date;
+    text-align: right;
+}
