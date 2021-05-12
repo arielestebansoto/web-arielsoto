@@ -1,0 +1,15 @@
+.section-audiovisual {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 8px;
+
+    inline-size: 100%;
+}
+.img-container {
+    inline-size: 100%;
+}
+.img-container img {
+    inline-size: 100%;
+    block-size: auto;
+    object-fit: cover;
+}

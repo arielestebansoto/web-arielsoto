@@ -1,0 +1,21 @@
+@use '../base/var';
+
+.post-title{
+    @extend %blog-title;
+    margin-block-end: var.$spacing-medium;
+    margin-block-start: var.$spacing-small;
+
+}
+.post-extract {
+    @extend %blog-extract;
+    text-align: center;
+    margin-block-end: var.$spacing-medium;
+}
+.post-date {
+    @extend %blog-date;
+    text-align: right;
+}
+.post-text {
+    @extend %blog-text;
+    margin-block-end: var.$spacing-medium;
+}

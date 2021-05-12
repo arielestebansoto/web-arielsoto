@@ -1,7 +1,9 @@
-@use './base/var';
+@use 'base/var';
 @use 'component/nav';
 @use 'component/main';
 @use 'component/project-card';
 @use 'component/menu';
 @use 'component/music';
 @use 'component/blog';
+@use 'component/post';
+@use 'component/audiovisual';

@@ -1,0 +1,9 @@
+extend ./component/index-template.pug
+block style
+    +head
+block content 
+    -var n = 1
+    section.section-audiovisual
+        while n < 23
+            .img-container 
+                img(src=`./img/quickgalery/quickgaleryimages-${n++}.jpg`, alt="social photgraphy")
