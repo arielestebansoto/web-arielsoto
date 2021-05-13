@@ -16,7 +16,6 @@
 .main-subtitle h1 {
     @extend %hero-subtitle;
 }
-
 .main-title {
     grid-column: 1 / 4;
     grid-row: 5 / 8 ;
@@ -49,8 +48,30 @@
     @extend %section-subtitle;
     margin-block-end: var.$spacing-medium;
 }
-.skills-container {
+.subsection-skill {
     inline-size: 100%;
     block-size: 100%;
-    background-color: grey;
+    @include var.breakpoint(var.$breakpoint-tablet) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    };
+}
+.subsection-1-skill {
+    place-self: center;
+}
+.subsection-2-skill {
+    inline-size: 100%;
+}
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100px;
+    inline-size: 100%;
+    place-items: center;
+}
+.icon {
+    inline-size: 80px;
+    block-size: 80px;
+    background-color: papayawhip;
 }

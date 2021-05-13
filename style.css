@@ -391,10 +391,38 @@
   margin-block-end: 24px;
 }
 
-.skills-container {
+.subsection-skill {
   inline-size: 100%;
   block-size: 100%;
-  background-color: grey;
+}
+@media only screen and (min-width: 768px) {
+  .subsection-skill {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+.subsection-1-skill {
+  place-self: center;
+}
+
+.subsection-2-skill {
+  inline-size: 100%;
+}
+
+.skill-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+  inline-size: 100%;
+  place-items: center;
+}
+
+.icon {
+  inline-size: 80px;
+  block-size: 80px;
+  background-color: papayawhip;
 }
 
 .project-container {
@@ -436,9 +464,16 @@
   transition: transform 0.7s ease-in-out;
   inline-size: 100vw;
   block-size: 100vh;
+  overflow: hidden;
   padding-block-start: 72px;
   padding-inline: 32px;
   background: #1d1d1d;
+}
+@media only screen and (min-width: 1024px) {
+  .menu {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .menu-list {
@@ -449,6 +484,11 @@
   block-size: 50%;
   padding-block-end: 48px;
 }
+@media only screen and (min-width: 1024px) {
+  .menu-list {
+    place-self: center;
+  }
+}
 
 .menu-link {
   text-transform: uppercase;
@@ -458,6 +498,12 @@
   display: flex;
   flex-direction: column;
   text-align: right;
+  block-size: 50%;
+}
+@media only screen and (min-width: 1024px) {
+  .menu-contact {
+    place-self: center;
+  }
 }
 
 .about {

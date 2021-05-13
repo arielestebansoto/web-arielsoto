@@ -9,10 +9,15 @@
     inline-size: 100vw;
     block-size: 100vh;
     
+    overflow: hidden;
     padding-block-start: var.$height-nav;
     padding-inline: var.$margin-grid-mobile;
 
     background: var.$color-dark;
+    @include var.breakpoint(var.$breakpoint-desktop) {
+        display: flex;
+        justify-content: space-around;
+    } 
 }
 .menu-list {
     display: flex;
@@ -22,6 +27,9 @@
 
     block-size: 50%;
     padding-block-end: var.$spacing-big;
+    @include var.breakpoint(var.$breakpoint-desktop) {
+        place-self: center;
+    } 
 }
 .menu-list li {
     @extend %list-style;
@@ -35,6 +43,10 @@
     display: flex;
     flex-direction: column;
     text-align: right;
+    block-size: 50%;
+    @include var.breakpoint(var.$breakpoint-desktop) {
+        place-self: center;
+    } 
 }
 .about {
     margin-block-end: var.$spacing-small;
