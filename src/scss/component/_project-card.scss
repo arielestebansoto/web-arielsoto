@@ -1,18 +1,36 @@
 @use '../base/var';
 .project-container {
     display: grid;
-    row-gap: var.$spacing-little;
+    row-gap: var.$spacing-medium;
+    @include var.breakpoint(var.$breakpoint-tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include var.breakpoint(var.$breakpoint-desktop) {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: var.$spacing-big;
+    }
 }
 .card-project {
+    @extend %style-none;
+
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 
-    block-size: 100%;
     inline-size: 100%;
+
+    @include  var.breakpoint(var.$breakpoint-tablet) {
+        flex-direction: column;
+    }
 }
 .card-project__image {
-    block-size: var.$card-block-size;
-    inline-size: var.$card-inline-size;
+    min-block-size: var.$card-block-size;
+    min-inline-size: var.$card-inline-size;
+    inline-size: 50%;
+    block-size: 100%;
+    @include var.breakpoint(var.$breakpoint-tablet) {
+        inline-size: 80%
+    }
 }
 .card-project__image img {
     block-size: 100%;
@@ -21,13 +39,15 @@
 }
 .card-project__info {
     display: flex;
-    block-size: 100%;
-    min-inline-size: var.$card-info-min-inline-size;
-    max-inline-size: var.$card-info-max-inline-size;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    place-items: center;
+    inline-size: 50%;
+    @include var.breakpoint(var.$breakpoint-tablet) {
+        margin-block: var.$spacing-medium;
+        inline-size: 100%;
+    }
 }
-.card-project__info a {
-    @extend %style-none;
+.card-project__info h1 {
     @extend %card-title;
+    text-align: center;
 }

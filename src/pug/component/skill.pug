@@ -7,10 +7,9 @@ section.section-main.section-skill
         .subsection-2-skill
             h2.section-main-subtitle Technologies
             .skill-container
-                .icon
-                .icon
-                .icon
-                .icon
-                .icon
-                .icon
+                // https://www.pngwing.com/es/free-png-pavgq/download
+                each icon in icons = ['html', 'css', 'javascript', 'sass', 'pug', 'prepros', 'github', 'vsc', 'figma',]
+                    .icon-tech-container
+                        h3.icon-tech-title #{icon}
+                        img.icon-tech(src=`./img/icon-tech/${icon}.png`, alt='icon')
                 
