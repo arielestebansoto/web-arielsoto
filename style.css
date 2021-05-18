@@ -1,3 +1,5 @@
+/* grid responsive */
+/* --- */
 .main-title h1 {
   color: #ffffff;
   font-size: 60px;
@@ -249,6 +251,16 @@
   min-block-size: 100vh;
   padding-block-start: 72px;
   padding-inline: 32px;
+}
+@media only screen and (min-width: 768px) {
+  .section {
+    padding-inline: 48px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .section {
+    padding-inline: 64px;
+  }
 }
 
 * {
@@ -671,38 +683,103 @@
 }
 
 .blog-entry {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
   inline-size: 100%;
   block-size: 125px;
   margin-block-end: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .blog-entry {
+    min-block-size: 250px;
+    grid-template-columns: minmax(100px, 150px) 1fr;
+    grid-template-rows: 80px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .blog-title {
+    grid-column: 2/3;
+  }
 }
 
 .blog-extract {
   text-align: center;
 }
+@media only screen and (min-width: 768px) {
+  .blog-extract {
+    grid-column: 2/3;
+    text-align: start;
+  }
+}
 
 .blog-date {
   text-align: right;
+}
+@media only screen and (min-width: 768px) {
+  .blog-date {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: center;
+    align-self: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .post {
+    display: grid;
+    grid-template-columns: minmax(100px, 150px) minmax(300px, 750px);
+    grid-template-rows: 80px;
+    justify-content: center;
+  }
 }
 
 .post-title {
   margin-block-end: 24px;
   margin-block-start: 12px;
 }
+@media only screen and (min-width: 768px) {
+  .post-title {
+    grid-column: 2/3;
+    align-self: center;
+  }
+}
 
 .post-extract {
   text-align: center;
   margin-block-end: 24px;
 }
+@media only screen and (min-width: 768px) {
+  .post-extract {
+    grid-column: 2/3;
+    margin-block-end: 48px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .post-extract {
+    margin-block-start: 48px;
+    margin-block-end: 72px;
+  }
+}
 
 .post-date {
   text-align: right;
 }
+@media only screen and (min-width: 768px) {
+  .post-date {
+    text-align: initial;
+    grid-column: 1/2;
+    place-self: center;
+  }
+}
 
 .post-text {
   margin-block-end: 24px;
+  max-inline-size: 600px;
+}
+@media only screen and (min-width: 768px) {
+  .post-text {
+    grid-column: 2/3;
+  }
 }
 
 .section-audiovisual {

@@ -34,3 +34,11 @@ $height-blog-entry: 125px;
 
 $icon-tech-container: 90px;
 $icon-tech-size: 60px;
+
+/* grid responsive */
+$height-row-blog-entry-tablet: 80px;
+$minmax-grid-column-blog: minmax(100px, 150px);
+$max-inline-size-column: 750px;
+/* --- */
+
+$max-inline-size-text: 600px;
