@@ -606,7 +606,20 @@
 
 .music {
   block-size: 100%;
-  inline-size: 100%;
+  min-inline-size: 100vh;
+}
+@media only screen and (min-width: 768px) {
+  .music {
+    padding-block-start: 72px;
+    padding-inline: 48px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .music {
+    padding-inline: 64px;
+  }
 }
 
 .music-hero {
@@ -625,14 +638,40 @@
   grid-row: 6/7;
   place-self: center;
 }
+@media only screen and (min-width: 768px) {
+  .music-hero-title {
+    display: none;
+  }
+}
 
-.music-list {
+.music-songs {
   padding-block-start: 24px;
   padding-inline: 32px;
+  overflow: hidden;
+}
+@media only screen and (min-width: 768px) {
+  .music-songs {
+    block-size: 310px;
+  }
+}
+
+.music-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 5px;
+  block-size: 100%;
+  overflow: scroll;
 }
 
 .music-title {
   display: none;
+}
+@media only screen and (min-width: 768px) {
+  .music-title {
+    display: block;
+    text-align: center;
+    margin-block-end: 24px;
+  }
 }
 
 .card-song {
@@ -785,8 +824,19 @@
 .section-audiovisual {
   display: grid;
   grid-template-columns: 1fr;
-  column-gap: 8px;
+  column-gap: 5px;
+  row-gap: 5px;
   inline-size: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .section-audiovisual {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .section-audiovisual {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .img-container {

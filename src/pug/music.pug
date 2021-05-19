@@ -7,7 +7,7 @@ mixin card-song(song, src)
         h1.card-song-title #{song}
         .card-song-play
             img(src= urlIconPlay, alt="")
-block style
+block meta
     +head('Music')
 block content 
     -var artist = 'Stephen Soto'
@@ -15,6 +15,16 @@ block content
     section.music
         .music-hero
             h1.music-hero-title #{artist}
-        .music-list
+        .music-songs    
             h1.music-title #{artist}
-            +card-song('Misterio', 'song1.jpg')
+            .music-list
+                +card-song('Misterio', 'song1.jpg')
+                +card-song('123sadxzxc', 'song1.jpg')
+                +card-song('Mytiuhgbb', 'song1.jpg')
+                +card-song('Misrtyrtuerio', 'song1.jpg')
+                +card-song('Misvbnrfterio', 'song1.jpg')
+                +card-song('Mvbnrto', 'song1.jpg')
+                +card-song('Misterio', 'song1.jpg')
+                +card-song('Misterio', 'song1.jpg')
+block script
+    +script('./index.js')

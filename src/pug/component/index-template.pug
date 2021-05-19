@@ -1,13 +1,15 @@
 mixin head(title="Ariel Soto",url="./style.css")
     title=  title
     link(rel="stylesheet", href= url)
+mixin script(src= './index.js', type)
+    script(src= src, type= type)
 
 doctype html
 html(lang="en")
     include ./head.pug
-        block style
+        block meta
     body.body
         include ./nav
         include ./menu 
         block content
-    script(src='./index.js', type='module')
+        block script
