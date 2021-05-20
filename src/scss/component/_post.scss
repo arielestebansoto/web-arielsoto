@@ -1,5 +1,7 @@
 @use '../base/var';
-
+.section-post {
+    @extend %section;
+}
 .post {
     @include var.breakpoint(var.$breakpoint-tablet) {
         display: grid;

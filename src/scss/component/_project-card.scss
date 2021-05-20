@@ -1,4 +1,7 @@
 @use '../base/var';
+.section-project {
+    @extend %section;
+}
 .project-container {
     display: grid;
     row-gap: var.$spacing-medium;
@@ -17,11 +20,27 @@
     justify-content: space-evenly;
     align-items: center;
 
+    position: relative;
     inline-size: 100%;
 
     @include  var.breakpoint(var.$breakpoint-tablet) {
         flex-direction: column;
     }
+}
+.card-project-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    block-size: 100%;
+    inline-size: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.2s ease-in;
+}
+.card-project:hover > .card-project-hover  {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 .card-project__image {
     min-block-size: var.$card-block-size;

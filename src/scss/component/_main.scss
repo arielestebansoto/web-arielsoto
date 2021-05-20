@@ -24,7 +24,7 @@
     @extend %hero;
     color: var.$color-font-white
 }
-.section-main {
+/* .section-main {
     display: flex;
     flex-direction: column;
 
@@ -34,6 +34,9 @@
     padding-inline: var.$margin-grid-mobile;
 
     background-color: var.$color-dark;
+} */
+.section-skill {
+    @extend %section;
 }
 .section-main-title {
     @extend %section-title;

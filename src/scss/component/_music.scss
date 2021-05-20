@@ -1,8 +1,8 @@
 @use '../base/var';
 
 .music {
-    block-size: 100%;
-    min-inline-size: 100vh;
+    inline-size: 100%;
+    min-block-size: 100vh;
     @include var.breakpoint(var.$breakpoint-tablet) {
         padding-block-start: var.$height-nav;
         padding-inline: var.$margin-grid-tablet;
