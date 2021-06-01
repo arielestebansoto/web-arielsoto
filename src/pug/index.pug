@@ -1,9 +1,12 @@
 extend ./component/index-template.pug
 block meta
     +head('Ariel Soto')
+block nav-menu
+    include ./component/nav
+    include ./component/menu 
 block content
     include ./component/main.pug
     include ./component/skill.pug
     include ./component/project.pug
 block script
-    +script('/index.js')
+    +script('/index.js', 'module')

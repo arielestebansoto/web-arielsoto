@@ -1,16 +1,5 @@
-/* ----- TOGGLE MENU ----- */
-const checkbox = document.querySelector('#checkbox')
-const menu = document.querySelector('.menu')
+import toggleMenu from './js/toggleMenu.js'
 
-checkbox.addEventListener('click', toggleMenu)
-
-function toggleMenu() {
-    if (menu.style.transform == "translate(0px, 0px)") {
-        menu.style.transform = "translate(0, -100%)"
-    } else {
-    menu.style.transform = "translate(0px, 0px)"
-    }
-}
 
 /* ----- APPEND QUICKPORTFOLIO IMAGES ----- */
 /* const quickGalery = document.querySelector('.quickgalery')
