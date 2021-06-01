@@ -1,6 +1,9 @@
 extend ../component/index-template.pug
 block meta
     +head('Post', '../style.css')
+block nav-menu
+    include  ../component/menu.pug
+    my-header(link-home="/../index.html")
 block content
     section.section-post.post 
         span.post-date 01 Ene 2021
@@ -9,4 +12,4 @@ block content
         p.post-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, labore ut harum voluptatum officia fugit, veritatis ab modi eum consequuntur porro quos repellat optio molestiae explicabo maiores dicta pariatur. Ipsa.
         p.post-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, ipsum consectetur incidunt assumenda, aliquam et illo eveniet deleniti a nesciunt laboriosam. Dolor obcaecati doloribus, blanditiis aliquam vitae quos cum beatae!
 block script
-    +script('../index.js')
+    +script('/wc.js', 'module')

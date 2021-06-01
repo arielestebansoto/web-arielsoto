@@ -1,4 +1,5 @@
-@use './base/var';
+// @use './base/var';
+@use '../base/var';
 .nav {
     display: grid;
     @extend %template-columns-mobile-1;
