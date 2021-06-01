@@ -6,25 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="./style.css"/>
-  </head>
-  <body class="body">
-    <header class="nav"> 
-      <div class="nav-icon"><a href="./index.html"> a</a></div>
-      <div class="nav-section"></div>
-      <div class="nav-menu">
-        <input type="checkbox" name="hamburgermenu" id="checkbox"><span>menu</span><span>close</span>
-      </div>
-    </header>
     <div class="menu"> 
       <div class="menu-list">
         <ul></ul>
-        <li><a class="menu-link" href="./index.html">Web Dev</a></li>
-        <li><a class="menu-link" href="./music.html">Music</a></li>
-        <li><a class="menu-link" href="./audiovisual.html">Audiovisual</a></li>
-        <li><a class="menu-link" href="./blog.html">Blog</a></li>
+        <li><a class="menu-link" href="/index.html">Web Dev</a></li>
+        <li><a class="menu-link" href="/music.html">Music</a></li>
+        <li><a class="menu-link" href="/audiovisual.html">Audiovisual</a></li>
+        <li><a class="menu-link" href="/blog.html">Blog</a></li>
       </div>
       <div class="menu-contact">
-        <div class="about"><a href="./about.html">About</a></div>
+        <div class="about"><a href="/about.html">About</a></div>
         <div class="social-media">
           <svg class="icon-social" id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m512 256c0-141.4-114.6-256-256-256s-256 114.6-256 256 114.6 256 256 256c1.5 0 3 0 4.5-.1v-199.2h-55v-64.1h55v-47.2c0-54.7 33.4-84.5 82.2-84.5 23.4 0 43.5 1.7 49.3 2.5v57.2h-33.6c-26.5 0-31.7 12.6-31.7 31.1v40.8h63.5l-8.3 64.1h-55.2v189.5c107-30.7 185.3-129.2 185.3-246.1z"/></svg>
           <svg class="icon-social" height="512pt" viewBox="0 0 512 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm-74.390625 387h-62.347656v-187.574219h62.347656zm-31.171875-213.1875h-.40625c-20.921875 0-34.453125-14.402344-34.453125-32.402344 0-18.40625 13.945313-32.410156 35.273437-32.410156 21.328126 0 34.453126 14.003906 34.859376 32.410156 0 18-13.53125 32.402344-35.273438 32.402344zm255.984375 213.1875h-62.339844v-100.347656c0-25.21875-9.027343-42.417969-31.585937-42.417969-17.222656 0-27.480469 11.601563-31.988282 22.800781-1.648437 4.007813-2.050781 9.609375-2.050781 15.214844v104.75h-62.34375s.816407-169.976562 0-187.574219h62.34375v26.558594c8.285157-12.78125 23.109375-30.960937 56.1875-30.960937 41.019531 0 71.777344 26.808593 71.777344 84.421874zm0 0"/></svg>
@@ -33,10 +24,22 @@
         <div class="contact-me"><span class="mail">arielestebansoto@gmail.com</span><span class="phone">+54 9 11 2243 1005</span><span class="location">Argentina, Buenos Aires, Pilar.</span></div>
       </div>
     </div>
+    <header class="nav"> 
+      <div class="nav-icon"><a href="/index.html"> a</a></div>
+      <div class="nav-section"></div>
+      <div class="nav-menu">
+        <input type="checkbox" name="hamburgermenu" id="checkbox"><span>menu</span><span>close</span>
+      </div>
+    </header>
+  </head>
+  <body class="body">
     <section class="section-blog">
       <h1 class="section-main-title">Blog</h1>
-      <div class="blog-entries"></div>
+      <div class="blog-entries"><a class="blog-entry" href="./blog/post.html">
+          <h1 class="blog-title">Title </h1>
+          <p class="blog-extract">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p><span class="blog-date">1 Ene 2021.</span></a>
+      </div>
     </section>
-    <script src="/index.js"></script>
+    <script src="/index.js" type="module"></script>
   </body>
 </html>

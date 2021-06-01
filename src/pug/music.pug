@@ -9,6 +9,9 @@ mixin card-song(song, src)
             img(src= urlIconPlay, alt="")
 block meta
     +head('Music')
+block nav-menu 
+    include ./component/menu.pug
+    include ./component/nav.pug
 block content 
     -var artist = 'Stephen Soto'
     -var urlThumbnail = './img/music/song/'
@@ -20,4 +23,4 @@ block content
             .music-list
                 +card-song('Misterio', 'song1.jpg')
 block script
-    +script('./index.js')
+    +script('/index.js', 'module')

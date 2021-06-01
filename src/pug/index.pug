@@ -2,11 +2,11 @@ extend ./component/index-template.pug
 block meta
     +head('Ariel Soto')
 block nav-menu
-    include  ./component/menu.pug
-    my-header(link-home="/index.html")
+    include ./component/menu.pug
+    include ./component/nav.pug
 block content
     include ./component/main.pug
     include ./component/skill.pug
     include ./component/project.pug
 block script
-    +script('/wc.js', 'module')
+    +script('/index.js', 'module')

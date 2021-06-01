@@ -1,6 +1,9 @@
 extend ./component/index-template.pug
 block meta
     +head('About')
+block nav-menu 
+    include ./component/menu.pug
+    include ./component/nav.pug
 block content
     .section-about
         h1.section-main-title About
@@ -8,4 +11,4 @@ block content
         p.section-main-text love the digital world. found that Web Development is one of the most exciting world. The best combination of art and technical side. 
     .about-galery
 block script
-    +script('./index.js')
+    +script('/index.js', 'module')
