@@ -43,6 +43,7 @@
     margin-block-end: var.$spacing-medium;
 }
 .section-main-text {
+    @extend %text;
     inline-size: 250px;
     align-self: center;
     margin-block-end: var.$spacing-big;
@@ -72,9 +73,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 100px;
-    inline-size: 100%;
     row-gap: var.$gutter-grid-mobile;
     place-items: center;
+
+    inline-size: 100%;
+    margin-block-end: var.$spacing-medium;
 }
 .icon-tech-container {
     inline-size: var.$icon-tech-container;
@@ -91,5 +94,5 @@
 }
 .icon-tech {
     inline-size: var.$icon-tech-size;
-    block-size: var.$icon-tech-size;
+    block-size: auto;
 }
