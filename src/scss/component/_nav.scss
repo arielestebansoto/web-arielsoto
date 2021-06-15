@@ -1,8 +1,12 @@
 // @use './base/var';
 @use '../base/var';
 .nav {
+    @extend %section;
     display: grid;
-    @extend %template-columns-mobile-1;
+
+    grid-template-columns: repeat(4, 4fr);
+    
+    column-gap: var.$gutter-grid-mobile;
     position: fixed;
     z-index: 100;
     top: 0;

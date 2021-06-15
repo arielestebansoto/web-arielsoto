@@ -1,10 +1,13 @@
 @use 'base/var';
 @use 'component/nav';
 @use 'component/main';
+@use 'component/skill';
 @use 'component/menu';
-@use 'component/music';
 @use 'component/about';
+@use 'component/project-card';
+@use 'component/project-modal';
+@use 'component/footer';
+@use 'component/music';
 @use 'component/blog';
 @use 'component/post';
 @use 'component/audiovisual';
-@use 'component/project-card';

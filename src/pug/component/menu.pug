@@ -1,10 +1,15 @@
--var sections = [ webDev = {name: 'Web Dev', link: '/index.html' }, music = {name: 'Music', link: '/music.html' }, audiovisual = {name: 'Audiovisual', link: '/audiovisual.html'}, blog = {name: 'Blog', link: '/blog.html'} ]
+-var sections = [ webDev = {name: 'Web Dev', link: '/index.html', status: 'active' }, music = {name: 'Music', link: '/music.html', status: 'inactive' }, audiovisual = {name: 'Audiovisual', link: '/audiovisual.html', status: 'inactive' }, blog = {name: 'Blog', link: '/blog.html', status: 'inactive' } ]
+
 .menu 
     .menu-list
         ul
         each section in sections
             li
-                a(href= section.link).menu-link #{section.name}
+                if section.status === 'inactive'
+                    del 
+                        a(href='/').menu-link #{section.name}
+                else    
+                    a(href= section.link).menu-link #{section.name}
     .menu-contact
         .about
             a(href="/about.html") About

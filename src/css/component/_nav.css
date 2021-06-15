@@ -21,9 +21,17 @@
   font-weight: 600;
 }
 .nav {
-  grid-template-columns: repeat(4, 4fr);
-  padding-inline: 32px;
-  column-gap: 32px;
+  inline-size: 90%;
+}
+@media only screen and (min-width: 600px) {
+  .nav {
+    inline-size: 85%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .nav {
+    inline-size: 70%;
+  }
 }
 
 * {
@@ -40,10 +48,15 @@
 
 .body {
   background: #1d1d1d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav {
   display: grid;
+  grid-template-columns: repeat(4, 4fr);
+  column-gap: 32px;
   position: fixed;
   z-index: 100;
   top: 0;
@@ -51,7 +64,7 @@
   block-size: 72px;
   background: rgba(0, 0, 0, 0);
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .nav {
     grid-template-columns: repeat(4, 4fr);
     margin: 0 48px;

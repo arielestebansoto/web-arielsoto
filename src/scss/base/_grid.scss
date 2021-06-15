@@ -1,6 +1,18 @@
 @use 'size';
 @use 'breakpoint';
 
+%section {
+    inline-size: 90%;
+    // padding-block-start: size.$height-nav;
+    // padding-inline: size.$margin-grid-mobile;
+    @include breakpoint.breakpoint(breakpoint.$breakpoint-tablet) {
+        inline-size: 85%;
+    }
+    @include breakpoint.breakpoint(breakpoint.$breakpoint-desktop) {
+        inline-size: 70%;
+    }
+}
+
 %template-columns-mobile-1 {
     grid-template-columns: repeat(4, 4fr);
     padding-inline: size.$margin-grid-mobile;
@@ -10,16 +22,4 @@
     grid-template-rows: repeat(7, 1fr);
     padding-block-start: size.$height-nav;
     row-gap: size.$gutter-grid-mobile;
-}
-%section {
-    inline-size: 100%;
-    min-block-size: 100vh;
-    padding-block-start: size.$height-nav;
-    padding-inline: size.$margin-grid-mobile;
-    @include breakpoint.breakpoint(breakpoint.$breakpoint-tablet) {
-        padding-inline: size.$margin-grid-tablet;
-    }
-    @include breakpoint.breakpoint(breakpoint.$breakpoint-desktop) {
-        padding-inline: size.$margin-grid-desktop;
-    }
 }
