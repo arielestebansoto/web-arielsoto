@@ -1,0 +1,8 @@
+*.pug
+*.scss
+*.txt
+*.config
+*.code-workspace
+*.md
+src
+src/
