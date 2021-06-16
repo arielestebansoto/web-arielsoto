@@ -94,7 +94,7 @@
   }
 }
 
-.section-main-subtitle {
+.modal h1, .section-main-subtitle {
   color: #ffffff;
   font-size: 24px;
   letter-spacing: 0;
@@ -102,7 +102,7 @@
   font-weight: 400;
 }
 @media only screen and (min-width: 600px) {
-  .section-main-subtitle {
+  .modal h1, .section-main-subtitle {
     color: #ffffff;
     font-size: 48px;
     letter-spacing: 0;
@@ -111,7 +111,7 @@
   }
 }
 
-.contact-me span, .section-main-text, .post-text {
+.modal-content p, .contact-me span, .section-main-text, .post-text {
   color: #ffffff;
   font-size: 16px;
   letter-spacing: 0.5px;
@@ -119,7 +119,7 @@
   font-weight: 400;
 }
 @media only screen and (min-width: 600px) {
-  .contact-me span, .section-main-text, .post-text {
+  .modal-content p, .contact-me span, .section-main-text, .post-text {
     color: #ffffff;
     font-size: 18px;
     letter-spacing: 0px;
@@ -234,16 +234,16 @@
   src: url(./font/Ubuntu-Bold.ttf);
   font-weight: 600;
 }
-.section-post, .section-blog, .section-project, .section-about, .section-skill, .main, .nav {
+.section-post, .section-blog, .modal, .modal-image-container, .section-project, .section-about, .section-skill, .main, .nav {
   inline-size: 90%;
 }
 @media only screen and (min-width: 600px) {
-  .section-post, .section-blog, .section-project, .section-about, .section-skill, .main, .nav {
+  .section-post, .section-blog, .modal, .modal-image-container, .section-project, .section-about, .section-skill, .main, .nav {
     inline-size: 85%;
   }
 }
 @media only screen and (min-width: 992px) {
-  .section-post, .section-blog, .section-project, .section-about, .section-skill, .main, .nav {
+  .section-post, .section-blog, .modal, .modal-image-container, .section-project, .section-about, .section-skill, .main, .nav {
     inline-size: 70%;
   }
 }
@@ -441,7 +441,7 @@
 
 .menu {
   position: fixed;
-  z-index: 50;
+  z-index: 100;
   transform: translate(0, -100%);
   transition: transform 0.7s ease-in-out;
   inline-size: 100vw;
@@ -562,7 +562,7 @@
 
 .card--info {
   position: absolute;
-  z-index: 100;
+  z-index: 60;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -600,11 +600,32 @@
 
 .modal {
   display: none;
-  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  z-index: 80;
   top: 0;
-  left: 0;
-  inline-size: 100vw;
-  min-block-size: 100vh;
+  left: 50%;
+  transform: translateX(-50%);
+  min-block-size: 90%;
+  padding-block-start: 72px;
+  background-color: #1d1d1d;
+}
+
+.modal h1 {
+  margin-block-end: 24px;
+}
+
+.modal-image-container {
+  block-size: 50vh;
+  overflow: scroll;
+  margin-block-end: 24px;
+}
+
+.modal-image-container img {
+  inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
 }
 
 footer {

@@ -1,0 +1,38 @@
+@use '../base/var';
+.modal {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 80;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @extend %section;
+    min-block-size: 90%;
+
+    padding-block-start: var.$height-nav;
+
+    background-color: var.$color-dark;
+}
+
+.modal h1 {
+    @extend %section-subtitle;
+    margin-block-end: var.$spacing-medium;
+}
+.modal-image-container {
+    @extend %section;
+    block-size: 50vh;
+    overflow: scroll;
+    margin-block-end: var.$spacing-medium;
+}
+.modal-image-container img {
+    inline-size: 100%;
+    block-size: auto;
+    object-fit: cover;
+}
+.modal-content p {
+    @extend %text;
+    
+}

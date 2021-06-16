@@ -1,0 +1,62 @@
+@use '../base/var';
+.section-skill {
+    @extend %section;
+}
+.section-main-title {
+    @extend %section-title;
+    margin-block-end: var.$spacing-medium;
+}
+.section-main-text {
+    @extend %text;
+    inline-size: 250px;
+    align-self: center;
+    margin-block-end: var.$spacing-big;
+}
+.section-main-subtitle {
+    @extend %section-subtitle;
+    margin-block-end: var.$spacing-medium;
+}
+.subsection-skill {
+    inline-size: 100%;
+    block-size: 100%;
+    display: grid;
+     @include var.breakpoint(var.$breakpoint-desktop) {
+        grid-template-columns: repeat(2, 1fr)
+    }; 
+}
+.subsection-1-skill {
+    place-self: center;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+.subsection-2-skill {
+    inline-size: 100%;
+}
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100px;
+    row-gap: var.$gutter-grid-mobile;
+    place-items: center;
+
+    inline-size: 100%;
+    margin-block-end: var.$spacing-medium;
+}
+.icon-tech-container {
+    inline-size: var.$icon-tech-container;
+    block-size: var.$icon-tech-container;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.icon-tech-title {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    margin-block-end: var.$spacing-small;
+}
+.icon-tech {
+    inline-size: var.$icon-tech-size;
+    block-size: auto;
+}

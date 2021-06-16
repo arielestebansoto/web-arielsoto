@@ -1,12 +1,2 @@
-<<<<<<< HEAD
-*.pug
-*.scss
-*.txt
-*.config
-*.code-workspace
-*.md
-src
-src/
-=======
-project
->>>>>>> d1940adf84db957bf1e766aa711b7b0f771c37ca
+projects/
+/projects
