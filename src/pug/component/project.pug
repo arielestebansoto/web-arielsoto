@@ -1,15 +1,23 @@
 mixin card-project(title, image, projectUrl)
     .card
         .modal
+            .close
+                span(id="modal-close") close
             h1 #{title}
             .modal-image-container
                 img(src="/projects/mercado-libre-home/screenshoots/mercado-libre-home-1.png", alt="screenshoots aps")
-            p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, necessitatibus expedita rerum adipisci numquam, consequatur minima, quod mollitia nam assumenda harum inventore nesciunt a animi porro. Placeat totam modi aliquid.
+            .moda-text-container
+                p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, necessitatibus expedita rerum adipisci numquam, consequatur minima, quod mollitia nam assumenda harum inventore nesciunt a animi porro. Placeat totam modi aliquid.
+                p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, necessitatibus expedita rerum adipisci numquam, consequatur minima, quod mollitia nam assumenda harum inventore nesciunt a animi porro. Placeat totam modi aliquid.
+                p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, necessitatibus expedita rerum adipisci numquam, consequatur minima, quod mollitia nam assumenda harum inventore nesciunt a animi porro. Placeat totam modi aliquid.
+                p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, necessitatibus expedita rerum adipisci numquam, consequatur minima, quod mollitia nam assumenda harum inventore nesciunt a animi porro. Placeat totam modi aliquid.
+                p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, necessitatibus expedita rerum adipisci numquam, consequatur minima, quod mollitia nam assumenda harum inventore nesciunt a animi porro. Placeat totam modi aliquid.
+                p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, necessitatibus expedita rerum adipisci numquam, consequatur minima, quod mollitia nam assumenda harum inventore nesciunt a animi porro. Placeat totam modi aliquid.
         .card-project
             img(src=`/img/project/${image}.jpg` alt='project image')
             .card--info
                 a(href=`${projectUrl}`).card-project--title #{title} 
-                span.card-project__info--about about the project
+                span.card-project__info--about click for about the project
             .card-project-overlay 
             .hastaelfondo
 
@@ -18,4 +26,4 @@ section.section-project
     .project-container
         +card-project('arielestebansoto.com', '1', '/index.html')
         +card-project('Mercado Libre Home', 'mercadolibre', '/projects/mercado-libre-home/index.html')
-        +card-project('Breaking Bad API', 'breakingbad', '/projects/breaking-bad-api/index.html')
+        +card-project('Breaking BApi', 'breakingbad', '/projects/breaking-bad-api/index.html')

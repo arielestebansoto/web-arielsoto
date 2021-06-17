@@ -1,2 +1,2 @@
 import toggleMenu from "./js/toggleMenu.js";
-import toggleModal from "./js/toggleModal.js";
+import { toggleModal, closeModal } from "./js/toggleModal.js";

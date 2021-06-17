@@ -128,7 +128,7 @@
   }
 }
 
-.contact-me a {
+.close span, .contact-me a {
   color: #ffffff;
   font-size: 14px;
   letter-spacing: 1.25px;
@@ -136,7 +136,7 @@
   font-weight: 500;
 }
 @media only screen and (min-width: 600px) {
-  .contact-me a {
+  .close span, .contact-me a {
     color: #ffffff;
     font-size: 32px;
     letter-spacing: 1.25px;
@@ -598,6 +598,12 @@
   object-fit: cover;
 }
 
+.close {
+  inline-size: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .modal {
   display: none;
   flex-direction: column;
@@ -610,6 +616,7 @@
   min-block-size: 90%;
   padding-block-start: 72px;
   background-color: #1d1d1d;
+  overflow: scroll;
 }
 
 .modal h1 {
