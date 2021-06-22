@@ -18,11 +18,10 @@
     transform: translateX(-50%);
 
     @extend %section;
-    min-block-size: 90%;
+    block-size: 100vh;
     padding-block-start: var.$height-nav;
     background-color: var.$color-dark;
 
-    overflow: scroll;
 }
 
 .modal h1 {
@@ -31,7 +30,7 @@
 }
 .modal-image-container {
     @extend %section;
-    block-size: 50vh;
+    block-size: 35vh;
     overflow: scroll;
     margin-block-end: var.$spacing-medium;
 }
@@ -39,6 +38,10 @@
     inline-size: 100%;
     block-size: auto;
     object-fit: cover;
+}
+.modal-text-container {
+    overflow: scroll;
+    block-size: 30vh;
 }
 .modal-content p {
     @extend %text;

@@ -613,10 +613,9 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  min-block-size: 90%;
+  block-size: 100vh;
   padding-block-start: 72px;
   background-color: #1d1d1d;
-  overflow: scroll;
 }
 
 .modal h1 {
@@ -624,7 +623,7 @@
 }
 
 .modal-image-container {
-  block-size: 50vh;
+  block-size: 35vh;
   overflow: scroll;
   margin-block-end: 24px;
 }
@@ -633,6 +632,11 @@
   inline-size: 100%;
   block-size: auto;
   object-fit: cover;
+}
+
+.modal-text-container {
+  overflow: scroll;
+  block-size: 30vh;
 }
 
 footer {
