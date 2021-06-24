@@ -31,7 +31,7 @@
 .modal-image-container {
     @extend %section;
     block-size: 35vh;
-    overflow: scroll;
+    overflow-y: scroll;
     margin-block-end: var.$spacing-medium;
 }
 .modal-image-container img {
@@ -40,7 +40,7 @@
     object-fit: cover;
 }
 .modal-text-container {
-    overflow: scroll;
+    overflow-y: scroll;
     block-size: 30vh;
 }
 .modal-content p {

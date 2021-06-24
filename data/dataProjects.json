@@ -1,13 +1,55 @@
 [
     {
-        "title": "title project",
-        "thumbnail": "https://url",
-        "repository": "github.com",
-        "description": "text",
-        "link": "https://url",
-        "post": "https://url",
+        "id": "",
+        "title": "",
+        "thumbnail": "",
+        "github": "",
+        "description": "",
+        "link": "",
+        "post": "",
         "screenshoots": [
-            "https:// bla bla"
+            ""
+        ]
+    },
+    {
+        "id": "arielestebansoto",
+        "title": "arielestebansoto",
+        "thumbnail": "./img/project/arielestebansoto/arielestebansoto.jpg",
+        "github": "https://github.com/arielestebansoto/web-arielsoto",
+        "description": "I decided to make my website from scratch. I made the design system in Figma, Using concepts of Material Design. Written with PUG (the HTML preprocessor), SASS and JS. I am going to add an audiovisual section to implement a player. And I'm also going to do a blog. Later I will write it in Typescript and use the Material Design framework",
+        "link": "https://arielestebansoto.com",
+        "post": "./blog/arielestebansoto",
+        "screenshoots": [
+            "./img/project/arielestebansoto/arielestebansoto-screenshot-1.png",
+            "./img/project/arielestebansoto/arielestebansoto-screenshot-2.png"
+        ]
+    },
+    {
+        "id": "mercadolibre",
+        "title": "Mercado Libre Home",
+        "thumbnail": "./img/project/mercadolibre/mercadolibre.jpg",
+        "github": "https://github.com/arielestebansoto/Mercado-Libre-Home",
+        "description": "Make in HTML and CSS vanilla. ",
+        "link": "./projects/mercado-libre-home/index.html",
+        "post": "./blog/mercado-libre-home",
+        "screenshoots": [
+            "./img/project/mercadolibre/mercadolibre-screenshoot-1.png",
+            "./img/project/mercadolibre/mercadolibre-screenshoot-2.png",
+            "./img/project/mercadolibre/mercadolibre-screenshoot-3.png",
+            "./img/project/mercadolibre/mercadolibre-screenshoot-4.png"
+        ]
+    },
+    {
+        "id": "breakingbad",
+        "title": "Breaking Bad Api",
+        "thumbnail": ".img/project/breakingbad/breakingbad.jpg",
+        "github": "https://github.com/arielestebansoto/breaking-bad-api",
+        "description": "A app tha get data froma API. With a card reval that shows more info about de characters. Built in Materialize CSS and JS vainilla.",
+        "link": "./projects/breaking-bad-api/index.html",
+        "post": "./blog/breaking-bad",
+        "screenshoots": [
+            "./img/project/breakingbad/breakingbad-screenshoot-1.png",
+            "./img/project/breakingbad/breakingbad-screenshoot-2.png"
         ]
     }
 ]

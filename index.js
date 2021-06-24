@@ -1,2 +1,2 @@
 import toggleMenu from "./js/toggleMenu.js";
-import { toggleModal, closeModal } from "./js/toggleModal.js";
+import Modal from './js/ProjectModal.js'

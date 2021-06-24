@@ -624,7 +624,7 @@
 
 .modal-image-container {
   block-size: 35vh;
-  overflow: scroll;
+  overflow-y: scroll;
   margin-block-end: 24px;
 }
 
@@ -635,7 +635,7 @@
 }
 
 .modal-text-container {
-  overflow: scroll;
+  overflow-y: scroll;
   block-size: 30vh;
 }
 
