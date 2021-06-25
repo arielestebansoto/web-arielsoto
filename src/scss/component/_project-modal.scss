@@ -4,9 +4,6 @@
     display: flex;
     justify-content: flex-end;
 }
-.close span {
-    @extend %button;
-}
 .modal {
     display: none;
     flex-direction: column;
@@ -25,7 +22,7 @@
 }
 
 .modal h1 {
-    @extend %section-subtitle;
+    // @extend %section-subtitle;
     margin-block-end: var.$spacing-medium;
 }
 .modal-image-container {
@@ -43,6 +40,7 @@
     overflow-y: scroll;
     block-size: 30vh;
 }
-.modal-content p {
-    @extend %text;
+.modal-text-container a {
+    display: block;
+    margin-block-end: var.$spacing-small;
 }

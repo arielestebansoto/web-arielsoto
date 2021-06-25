@@ -37,7 +37,6 @@
 }
 .card-project--title {
   @extend %style-none;
-  @extend %card-title;
   margin-block-end: var.$spacing-small;
 }
 .card-project__info--about {

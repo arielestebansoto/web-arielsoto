@@ -1,18 +1,18 @@
 section.section-skill
-    h1.section-main-title Skills
+    h3.section-main-title Skills
     .subsection-skill
         .subsection-1-skill
-            p.section-main-text
+            h6.section-main-text
                 | Front End is what I'm really into. I'm also interested in MERN Stack . 
         .subsection-2-skill
-            h2.section-main-subtitle Technologies
+            h5.section-main-subtitle Technologies
             .skill-container
                 // https://www.pngwing.com/es/free-png-pavgq/download
                 each icon in icons = ['github', 'vsc', 'npm', 'html', 'css', 'javascript', 'pug', 'sass', 'bootstrap', 'materialize',  'figma',]
                     .icon-tech-container
                         h3.icon-tech-title #{icon}
                         img.icon-tech(src=`./img/icon-tech/${icon}.png`, alt='icon')
-            h2.section-main-subtitle Learning 
+            h3.section-main-subtitle Learning 
             .skill-container
                 each icon in icons = ['typescript', 'react', 'database', 'node', ]
                         .icon-tech-container

@@ -2,18 +2,17 @@ const modal = document.querySelector('#modal')
 function renderModal(project) {
     modal.innerHTML = `
     <div class="close">
-        <span id="close-modal">close</span>
+        <span id="close-modal" class="btn">close</span>
     </div>
-    <h1>${project.title}</h1>
+    <h3>${project.title}</h3>
     <div class="modal-image-container">
         <img src=${project.screenshoots[0]} alt="screenshoots aps"/>
     </div>
-    <div class="modal-image-container">
+    <div class="modal-text-container">
         <p>${project.description}</p>
-        <a href=${project.link}>To the web Page</a>
-        <a href=${project.github}>Git Hub repository</a>
-
-        </div>
+        <a href=${project.link} class="btn">To the web Page</a>
+        <a href=${project.github} class="btn">Git Hub repository</a>
+    </div>
         `
     }
     

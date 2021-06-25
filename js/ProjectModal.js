@@ -5,7 +5,7 @@ card.forEach(element => {
     element.addEventListener('click', Modal)
 })
 async function fetchData() {
-    const URL_DATA = '/data/dataProjects.json'
+    const URL_DATA = './data/dataProjects.json'
     const response = await fetch(URL_DATA)
     const data = await response.json()
     return data
@@ -13,6 +13,7 @@ async function fetchData() {
 function getAttribute(element) {
     element.stopPropagation()
     const target = element.currentTarget
+    console.log(target)
     const attribute = target.getAttribute('data-id')
     return attribute
 }

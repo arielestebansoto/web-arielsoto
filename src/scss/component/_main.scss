@@ -17,15 +17,26 @@
 .main-subtitle {
     grid-column: 1 / 3;
     grid-row: 2 / 4 ;
-}
-.main-subtitle h1 {
-    @extend %hero-subtitle;
+
+   font-size: 25px;
+   letter-spacing: 0;
+   line-height: 37px;
+   font-weight: bold;
+   @include var.breakpoint(var.$breakpoint-tablet) {
+    font-size: 48px;
+   line-height: 67px;
+   }
 }
 .main-title {
     grid-column: 1 / 4;
     grid-row: 5 / 8 ;
-}
-.main-title h1 {
-    @extend %hero;
-    color: var.$color-font-white
+
+    font-size: 60px;
+    letter-spacing: -0.5px;
+    line-height: 84px;
+    font-weight: bold;
+    @include var.breakpoint(var.$breakpoint-tablet) {
+     font-size: 98px;
+    line-height: 137px;
+    }
 }

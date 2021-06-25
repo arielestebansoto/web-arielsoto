@@ -3,17 +3,14 @@
     @extend %section;
 }
 .section-main-title {
-    @extend %section-title;
     margin-block-end: var.$spacing-medium;
 }
 .section-main-text {
-    @extend %text;
     inline-size: 250px;
     align-self: center;
     margin-block-end: var.$spacing-big;
 }
 .section-main-subtitle {
-    @extend %section-subtitle;
     margin-block-end: var.$spacing-medium;
 }
 .subsection-skill {

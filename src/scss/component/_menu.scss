@@ -36,7 +36,15 @@
 }
 .menu-link {
     @extend %style-none;
-    @extend %menu-link;
+    font-size: 36px;
+    letter-spacing: 0.25px;
+    line-height: 50px;
+    font-weight: bold;
+    @include var.breakpoint(var.$breakpoint-tablet ) {
+        font-size: 48px;
+        letter-spacing: 0;
+        line-height: 57px;
+    }
     text-transform: uppercase;
 }
 .menu-contact {
@@ -53,7 +61,15 @@
 }
 .about a {
     @extend %style-none;
-    @extend %menu-subtitle;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 33px;
+    font-weight: bold;
+    @include var.breakpoint(var.$breakpoint-tablet ) {
+        font-size: 48px;
+        letter-spacing: 0;
+        line-height: 57px;
+    }
 }
 .social-media {
     display: flex;
@@ -72,18 +88,11 @@
 .contact-me {
     block-size: 100%;
 }
-.contact-me a {
-    @extend %style-none;
-    @extend %button;
-    display: inline-block;
-    padding: var.$button-inline-size / 4 ;
-}
 .contact-me {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 .contact-me span {
-    @extend %text;
     margin-block-end: var.$spacing-medium;
 }

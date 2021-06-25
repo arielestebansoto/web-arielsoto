@@ -120,33 +120,6 @@
   line-height: typography.$line-height-button-desktop;
   font-weight: typography.$font-weight-button-desktop;
 }
-%hero {
-  @include h2-bold;
-  @include breakpoint.breakpoint(breakpoint.$breakpoint-tablet) {
-    @include h1-bold;
-  }
-}
-%hero-subtitle {
-  @include h5-bold;
-  @include breakpoint.breakpoint(breakpoint.$breakpoint-tablet) {
-    @include h3-bold;
-  }
-}
-%nav {
-  @include body1;
-}
-%menu-link {
-  @include h4-bold;
-  @include breakpoint.breakpoint(breakpoint.$breakpoint-tablet) {
-    @include h3-bold;
-  }
-}
-%menu-subtitle {
-  @include h5-bold;
-  @include breakpoint.breakpoint(breakpoint.$breakpoint-tablet) {
-    @include h3;
-  }
-}
 %section-title {
   @include h4-bold;
   @include breakpoint.breakpoint(breakpoint.$breakpoint-tablet) {
