@@ -1,8 +1,9 @@
 import React from 'react'
 
 import { Container, Row, Col } from 'react-bootstrap'
+import { FooterPage } from './styles'
 
-export const Footer = () => <footer>
+export const Footer = () => <FooterPage>
     <Container>
         <Row xs={1} sm={3}>
             <Col>
@@ -11,9 +12,10 @@ export const Footer = () => <footer>
             <Col>
                 <span>+54 9 11 2243 2005</span>
             </Col>
+        
             <Col>
                 <span>arielestebansoto@gmail.com</span>
             </Col>
         </Row>
     </Container>
-</footer>
+</FooterPage>

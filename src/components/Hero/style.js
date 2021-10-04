@@ -20,7 +20,7 @@ export const Title = styled.h1`
 `
 
 export const SubTitle = styled.p`
-    animation: slide 2.5s ease-in;
+    animation: slide 2s ease-in;
 
     @keyframes slide {
         0% { opacity: 0; margin-top: -4px};

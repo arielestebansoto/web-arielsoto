@@ -1,15 +1,17 @@
 import React from 'react'
 
 import { Container, Row, Col } from 'react-bootstrap'
+import { SectionProjects } from '../SectionProjects'
+import { SectionSkills } from '../SectionSkills'
 
-export const Curriculum = () =>
+export const Sections = () =>
     <Container>
         <Row>
             <Col xs={12} sm={6}>
-                <h1>Projexts</h1>
+                <SectionProjects />
             </Col>
             <Col xs={12} sm={6}>
-                <h1>Skills</h1>
+                <SectionSkills />
             </Col>
         </Row>
     </Container>

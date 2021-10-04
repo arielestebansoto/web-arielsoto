@@ -2,16 +2,13 @@ import React from 'react'
 
 import { Container, Row, Col } from 'react-bootstrap'
 import { Div } from './styles'
+import { Hero } from '../Hero'
 
 export const Main = () => <Container>
     <Row>
         <Col>
             <Div>
-                <p>
-                    <span>Hi,</span> 
-                    <span>I'm Ariel Soto</span>
-                    <span>web developer</span>
-                </p>
+                <Hero />
             </Div>
         </Col>
     </Row>
