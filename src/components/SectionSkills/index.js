@@ -1,20 +1,20 @@
 import React from 'react'
 
-import { TitleContainer, Title, GridSkills, BoxSkill } from './styles'
+import { SectionContainer, TitleContainer, Title, SkillsCharset, SkillItem } from './styles'
 
 export const SectionSkills = () => {
     const skills = [ 'React', 'React-Router', 'Redux', 'Bootstrap', 'Styled-Components', 'Git Hub', 'Webpack', 'Material UI', 'NodeJS', 'Linux', ,
     ]
     return (
-        <>
+        <SectionContainer>
             <TitleContainer>
                 <Title>skills</Title>
             </TitleContainer>
-            <GridSkills>
+            <SkillsCharset>
                 {
-                    skills.map( (element, index) => <BoxSkill key={index}>{element}</BoxSkill>)
+                    skills.map( (element, index) => <SkillItem key={index}>{element}</SkillItem>)
                 }
-            </GridSkills>
-        </>
+            </SkillsCharset>
+        </SectionContainer>
     )
 }

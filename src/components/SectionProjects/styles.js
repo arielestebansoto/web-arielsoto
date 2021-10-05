@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+export const SectionContainer = styled.div`
+    margin-bottom: 32px;
+`
 export const Ul = styled.ul`
     list-style: none;
     padding-inline-start: 0;
