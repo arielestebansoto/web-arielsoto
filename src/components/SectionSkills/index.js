@@ -12,7 +12,7 @@ export const SectionSkills = () => {
             </TitleContainer>
             <GridSkills>
                 {
-                    skills.map( element => <BoxSkill>{element}</BoxSkill>)
+                    skills.map( (element, index) => <BoxSkill key={index}>{element}</BoxSkill>)
                 }
             </GridSkills>
         </>
