@@ -4,8 +4,8 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { FooterPage } from './styles'
 
 export const Footer = () => <FooterPage>
-    <Container>
-        <Row xs={1} sm={3}>
+    <Container>  
+        <Row xs={1} md={3}>
             <Col>
                 <a href="/">ariel esteban soto</a>
             </Col>
