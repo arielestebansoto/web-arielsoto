@@ -6,8 +6,15 @@ export const Item = styled.li`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    transition: all 1.5s ease-out;
+
     &:hover {
-        background-color: rgba(0, 0, 0, .3);
+        background: rgba( 255, 255, 255, 0.05 );
+        box-shadow: 0 8px 32px 0 rgba( 255, 255, 255, 0.3 );
+        backdrop-filter: blur( 12.5px );
+        -webkit-backdrop-filter: blur( 12.5px );
+        
         color: white;
     }
 `
