@@ -17,11 +17,15 @@
 }
 
 .offcanvas {
-    width: 75%;
+    width: 97%;
+    height: 97%;
+    margin: 0 auto;
     background-color: rgba(133, 206, 248, .3);
     backdrop-filter: blur(4px);
-    box-shadow: -1px 1px 4px 0 rgba(255, 255, 255, .05) ;
+    box-shadow: 4px 4px 10px 5px rgba(0, 0, 0, .5) ;
 
-    border-left: 1px solid rgba(255, 255, 255, 1);
-    border-radius: 10px 0 0 10px;
+    border-right: 1px solid rgba(255, 255, 255, 1);
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    border-left: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 0 0 15px 15px;
 }
