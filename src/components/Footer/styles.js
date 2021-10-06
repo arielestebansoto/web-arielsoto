@@ -8,10 +8,8 @@ export const FooterPage = styled.footer`
     transition: all 1.5s ease-in;
     
     &:hover {
-        background: rgba( 255, 255, 255, 0.05 );
-        box-shadow: 0 -16px 32px 0 rgba( 255, 255, 255, 0.3 );
+        box-shadow: 0 -4px 1px 0 rgba( 255, 255, 255, 0.1 );
         backdrop-filter: blur( 12.5px );
-
     }
 `
 

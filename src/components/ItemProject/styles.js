@@ -7,11 +7,10 @@ export const Item = styled.li`
     justify-content: center;
     align-items: center;
     
-    transition: all 1.5s ease-out;
+    transition: all 1s ease-in;
 
     &:hover {
-        background: rgba( 255, 255, 255, 0.05 );
-        box-shadow: 0 8px 32px 0 rgba( 255, 255, 255, 0.3 );
+        box-shadow: 0 0 4px 2px rgba( 255, 255, 255, 0.1 );
         backdrop-filter: blur( 12.5px );
         -webkit-backdrop-filter: blur( 12.5px );
         
