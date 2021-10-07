@@ -6,8 +6,8 @@ import { Home } from '../../pages/Home'
 
 export const App = () => 
     <>
-        <WebBackground />
-        <WebContent>
+        {/* <WebBackground /> */}
+        {/* <WebContent> */}
             <Home />
-        </WebContent>
+        {/* </WebContent> */}
     </>

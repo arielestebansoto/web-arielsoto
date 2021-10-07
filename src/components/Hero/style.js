@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const HeroContainer = styled.div`
     position: absolute;
-    top: 10%;
+    top: 30%;
     overflow:hidden;
 `
 export const Title = styled.h1`

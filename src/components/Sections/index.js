@@ -7,7 +7,7 @@ import { SectionSkills } from '../SectionSkills'
 
 export const Sections = () => 
     <Container>
-        <Row>
+        <Row xs={1} sm={2}>
             <Col>
                 <SectionProjects />
             </Col>
