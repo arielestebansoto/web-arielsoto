@@ -31,13 +31,13 @@ export const Menu = (props) =>
                             <li><Anchor href="/">About</Anchor></li>
                         </Ul>
                         <SocialIcons>
-                            <AnchorIcon href="https://www.github.com">
+                            <AnchorIcon href="https://github.com/arielestebansoto" target="_blank">
                                 <BsGithub fill="white" fontSize="25px" />
                             </AnchorIcon>
-                            <AnchorIcon href="https://www.linkedin.com">
+                            <AnchorIcon href="https://www.linkedin.com/in/ariel-esteban-soto/" target="_blank">
                                 <BsLinkedin fill="white" fontSize="25px" />
                             </AnchorIcon>
-                            <AnchorIcon href="https://www.instagram.com">
+                            <AnchorIcon href="https://www.instagram.com/arielestebansoto/" target="_blank">
                                 <BsInstagram fill="white" fontSize="25px" />
                             </AnchorIcon>
                         </SocialIcons>
