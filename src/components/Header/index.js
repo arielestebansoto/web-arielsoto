@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
-import { Navbar, Container, Row, Col, Button } from 'react-bootstrap'
+import { Navbar, Container, Row, Col } from 'react-bootstrap'
+import { IconContainer } from './styles'
 import { Menu } from '../Menu'
 import { BsList } from "react-icons/bs"
 
@@ -17,7 +18,9 @@ export const Header = () => {
                         <Navbar.Brand href="/">arielsoto</Navbar.Brand>
                     </Col>
                     <Col xs={1} >
-                        <BsList onClick={handleShow}/>
+                        <IconContainer>
+                            <BsList onClick={handleShow}/>
+                        </IconContainer>
                     </Col>
                 </Row>
             </Container>
