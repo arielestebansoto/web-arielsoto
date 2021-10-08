@@ -2,10 +2,11 @@ import React from 'react'
 
 import { Header } from '../../components/Header'
 import { Main } from '../../components/Main'
-import { Sections } from '../../components/Sections'
-
+import { Works } from '../../components/Works'
+import { Skills } from '../../components/Skills'
 export const Home = () => <>
         <Header />
         <Main />
-        <Sections />
-    </>
+        <Works />
+        <Skills />
+        </>

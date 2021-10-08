@@ -4,17 +4,19 @@ export const Ul = styled.ul`
     list-style: none;
     padding-left: 0;
 `
-export const Anchor = styled.a`
+export const Li = styled.li`
     font-size: 36px;
     letter-spacing: 0.25px;
     line-height: 50px;
     font-weight: bold;
     text-transform: uppercase;
-    color: white;
-    &:hover {
+    & > a {
         color: white;
+        text-decoration: none;
+        &:hover {
+            color: white;
+        }
     }
-    text-decoration: none;
 `
 export const AnchorIcon = styled.a`
     display: inline-block;

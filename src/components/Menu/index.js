@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import { Offcanvas } from 'react-bootstrap' 
 
 import { Container, Row, Col } from 'react-bootstrap'
 
 import { BsCircle, BsGithub, BsLinkedin, BsInstagram } from 'react-icons/bs'
-import { Ul, Anchor, Contact, SocialIcons, AnchorIcon, ContactMe } from './styles'
+import { Ul, Li, Contact, SocialIcons, AnchorIcon, ContactMe } from './styles'
 
 export const Menu = (props) =>
     <Offcanvas show={props.show} placement='top' onHide={props.handleClose} backdrop={false}>
@@ -19,8 +20,8 @@ export const Menu = (props) =>
             <Row>
                 <Col md={{span: 4, offset: 1}} lg={{span: 4, offset: 2}}>
                     <Ul>
-                        <li><Anchor href="/">Web Dev</Anchor></li>
-                        <li><Anchor href="/">Audiovisual</Anchor></li>
+                        <Li><Link to='/'>Web Dev</Link></Li>
+                        <Li><Link to='/audiovisual'>Audiovisual</Link></Li>
                     </Ul>
                 </Col>
             </Row>
@@ -28,7 +29,7 @@ export const Menu = (props) =>
                 <Col md={{span: 4, offset: 7}} lg={{span: 4, offset: 6}}>
                     <Contact> 
                         <Ul>
-                            <li><Anchor href="/">About</Anchor></li>
+                            <Li><Link to='/about'>About</Link></Li>
                         </Ul>
                         <SocialIcons>
                             <AnchorIcon href="https://github.com/arielestebansoto" target="_blank">

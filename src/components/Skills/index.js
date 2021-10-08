@@ -2,7 +2,7 @@ import React from 'react'
 
 import { SectionContainer, TitleContainer, Title, SkillsCharset, SkillItem } from './styles'
 
-export const SectionSkills = () => {
+export const Skills = () => {
     const skills = [ 'React', 'React-Router', 'Redux', 'Bootstrap', 'Styled-Components', 'Git Hub', 'Webpack', 'Material UI', 'NodeJS', 'Linux', ,
     ]
     return (

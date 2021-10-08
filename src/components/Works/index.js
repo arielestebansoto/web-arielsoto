@@ -4,7 +4,7 @@ import { SectionContainer, TitleContainer, Title, Ul } from './styles'
 
 import { ItemProject } from '../ItemProject'
 
-export const SectionProjects = () => 
+export const Works = () => 
     <SectionContainer>
         <TitleContainer>
             <Title>works</Title>
