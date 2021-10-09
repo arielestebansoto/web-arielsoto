@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 const size = (factor) =>  75 * factor + 'px'
+const bgColor = '43, 81, 97,'
 
 export const CubeContainer = styled.div`
     display: flex;
@@ -23,6 +24,9 @@ export const Scene = styled.div`
     // @keyframes sceneRotate {
     //     to { transform: rotateY(360deg) }
     // }
+    &.project-1 {
+        transform: rotateY(90deg)
+    }
 `
 
 export const Floor = styled.div`
@@ -45,22 +49,24 @@ export const Floor = styled.div`
 
 export const Cube = styled.div`
     width: ${size(3)};
-    height: ${size(5)};
+    height: ${size(4.5)};
 
     position: absolute;
     top: ${size(-3)};
     transform: translateX(-50%);
     transform-style: preserve-3d;
 
-    & > .front { transform: translateZ(${size(1.5)})}
-    & > .back { transform: rotateY(180deg) translateZ(${size(1.5)})}
-    & > .right { transform: rotateY(90deg) translateZ(${size(1.5)})}
-    & > .left { transform: rotateY(270deg) translateZ(${size(1.5)})}
+    & > .front { transform: translateZ(${size(1.7)})}
+    & > .back { transform: rotateY(180deg) translateZ(${size(1.7)})}
+    & > .right { transform: rotateY(90deg) translateZ(${size(1.7)})}
+    & > .left { transform: rotateY(270deg) translateZ(${size(1.7)})}
 
     & > div {
-        background-color: rgba(133, 206, 248, .5); 
-        filter: blur(1px);
-        border: 1px solid rgba(255, 255, 255, .3)
+        background: rgba( ${bgColor} .7 );
+        box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.37 );
+        filter: blur( 1px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.5 );
     }
 `
 
