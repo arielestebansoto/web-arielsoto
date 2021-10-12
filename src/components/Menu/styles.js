@@ -5,7 +5,7 @@ export const Ul = styled.ul`
     padding-left: 0;
 `
 export const Li = styled.li`
-    font-size: 36px;
+    font-size: 32px;
     letter-spacing: 0.25px;
     line-height: 50px;
     font-weight: bold;

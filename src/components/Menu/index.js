@@ -5,18 +5,13 @@ import { Offcanvas } from 'react-bootstrap'
 
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { BsCircle, BsGithub, BsLinkedin, BsInstagram } from 'react-icons/bs'
+import { BsGithub, BsLinkedin, BsInstagram } from 'react-icons/bs'
 import { Ul, Li, Contact, SocialIcons, AnchorIcon, ContactMe } from './styles'
 
 export const Menu = (props) =>
-    <Offcanvas show={props.show} placement='top' onHide={props.handleClose} backdrop={false}>
+    <Offcanvas show={props.show} placement='start' backdrop={false}>
         <Offcanvas.Body>
         <Container>
-            <Row style={{width: "100%", marginBottom: '30px'}}>
-                <Col xs={{span: 2, offset: 6}}>
-                    <BsCircle onClick={props.handleClose} fill="white" fontSize="15px"/>
-                </Col>
-            </Row>
             <Row>
                 <Col md={{span: 4, offset: 1}} lg={{span: 4, offset: 2}}>
                     <Ul>

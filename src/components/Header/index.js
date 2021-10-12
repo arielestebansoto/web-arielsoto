@@ -2,13 +2,12 @@ import React, { useState } from 'react'
 
 import { Navbar, Container, Row, Col } from 'react-bootstrap'
 import { Menu } from '../Menu'
-import { BsCircle } from "react-icons/bs"
+import { ButtonMenu } from '../ButtonMenu'
 
 export const Header = () => {
     const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleShow = () => {setShow(!show)}
     return ( <>
         <Navbar bg="transparent" variant="dark" sticky="top">
             <Container >
@@ -16,13 +15,13 @@ export const Header = () => {
                     <Col xs={4}>
                         <Navbar.Brand href="/">arielsoto</Navbar.Brand>
                     </Col>
-                    <Col xs={{span: 2, offset: 2 }} >
-                        <BsCircle onClick={handleShow} fill="white" fontSize="15px"/>
+                    <Col xs={{span: 1, offset: 7 }} >
+                        <ButtonMenu handleShow={handleShow}/>
                     </Col>
                 </Row>
             </Container>
         </Navbar>
-        <Menu show={show} handleClose={handleClose}/>
+        <Menu show={show}/>
         </>
     )
 }
