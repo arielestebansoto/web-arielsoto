@@ -4,11 +4,14 @@ const size = (factor) =>  75 * factor + 'px'
 const bgColor = '43, 81, 97,'
 
 export const CubeContainer = styled.div`
+    position: absolute;
+    top: 8%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
 
     perspective: ${size(10)};
@@ -19,11 +22,7 @@ export const Scene = styled.div`
     transform-style: preserve-3d;
 
     transition: transform 1s linear;
-    // animation: sceneRotate 30s infinite linear;
 
-    // @keyframes sceneRotate {
-    //     to { transform: rotateY(360deg) }
-    // }
     &.project-1 {
         transform: rotateY(90deg)
     }
@@ -52,7 +51,7 @@ export const Cube = styled.div`
     height: ${size(4.5)};
 
     position: absolute;
-    top: ${size(-3)};
+    top: ${size(-3.8)};
     transform: translateX(-50%);
     transform-style: preserve-3d;
 
@@ -64,16 +63,16 @@ export const Cube = styled.div`
     & > div {
         background: rgba( ${bgColor} .7 );
         box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.37 );
-        filter: blur( 1px );
         border-radius: 10px;
         border: 1px solid rgba( 255, 255, 255, 0.5 );
     }
-`
-
-export const CubeSide = styled.div `
+    `
+    
+    export const CubeSide = styled.div `
     position: absolute;
     width: 100%;
     height: 100%;
+    
 `
 
 export const TurnRight = styled.div`

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const SectionContainer = styled.div`
+    position: relative;
+    height: 100vh;
     margin-bottom: 32px;
 `
 export const Ul = styled.ul`
@@ -11,7 +13,6 @@ export const Ul = styled.ul`
 export const TitleContainer = styled.div`
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
 `
 
 export const Title = styled.h2`

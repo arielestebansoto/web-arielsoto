@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { Container, Row, Col, Button } from 'react-bootstrap'
-
+import { ButtonCube, ButtonsContainer } from './styles'
 export const CubeControls = () =>  {
 
     const handleClick = (e) => {
+        console.log(e)
         const scene = document.querySelector('#Scene')
         const sceneRotationValue = scene.style.transform
         
@@ -31,20 +31,16 @@ export const CubeControls = () =>  {
             const toRotation = rotation + currentRotationValue
             return scene.style.transform = `rotateY(${toRotation}deg)`
         }
-        if (e.target.innerHTML === 'back') {
+        if (e.target.id === 'prev') {
             return rotate(90) 
         }
-        if (e.target.innerHTML === 'foward') {
+        if (e.target.id === 'next') {
              return rotate(-90)
         }
     }
-    return <Row>
-            <Col>
-                <Button onClick={handleClick}>back</Button>
-            </Col>
-            <Col>
-                <Button onClick={handleClick}>foward</Button>
-            </Col>
-        </Row>
+    return <ButtonsContainer>
+            <ButtonCube onClick={handleClick} id="prev"></ButtonCube>
+            <ButtonCube onClick={handleClick} id="next"style={{right: '0'}}></ButtonCube>
+        </ButtonsContainer>
 
 }
