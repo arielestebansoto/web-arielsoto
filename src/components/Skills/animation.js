@@ -28,25 +28,17 @@ const material = new MeshBasicMaterial(
     // camera.position.z = 10
     
     const oControl = new OrbitControls(camera, renderer.domElement)
-    const tControl = new TransformControls(camera, renderer.domElement)
+    // const tControl = new TransformControls(camera, renderer.domElement)
     
-    tControl.addEventListener('mouseDown', e => {
+    
+    const dControl = new DragControls([cube], camera, renderer.domElement)
+   
+    dControl.addEventListener('dragstart', e => {
         oControl.enabled = false
     })
-    tControl.addEventListener('mouseUp', e => {
+    dControl.addEventListener('dragend', e => {
         oControl.enabled = true
     })
-
-    tControl.attach(cube)
-    scene.add(tControl)
-    tControl.setMode('translate')
-    // tControl.showX = false
-    // tControl.showY = false
-    // tControl.showZ = false
-    // tControl.setMode('rotate')
-    // tControl.setMode('scale')
-
-    const dContrl = new DragControls(camera, domElement)
     
     
     function redimencionar() {
