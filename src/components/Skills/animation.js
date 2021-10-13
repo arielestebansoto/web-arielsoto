@@ -1,4 +1,5 @@
 import { Scene, PerspectiveCamera, WebGL1Renderer, Color, Mesh, BoxGeometry, MeshBasicMaterial, Fog, TextureLoader, CameraHelper, OrthographicCamera } from "three";
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls' 
 
 const scene = new Scene()
 // scene.background = new Color(0x2a3b4c)
@@ -11,16 +12,9 @@ const camera = new PerspectiveCamera(
     0.1,
     2000
     )
-const newCamera = new OrthographicCamera(
-    5,
-    -5,
-    5,
-    -5,
-    3,
-    10
-    )
-const helper = new CameraHelper(newCamera)
-scene.add(helper)
+// const newCamera = new OrthographicCamera( 5, -5, 5, -5, 3, 10 )
+// const helper = new CameraHelper(newCamera)
+// scene.add(helper)
 
 const renderer = new WebGL1Renderer()
 renderer.setSize(window.innerWidth, window.innerHeight)
@@ -28,22 +22,46 @@ renderer.setSize(window.innerWidth, window.innerHeight)
 const geometry = new BoxGeometry()
 const material = new MeshBasicMaterial({color: 'green', wireframe: true})
 const cube = new Mesh(geometry, material)
-cube.position.z = -3.2
+// cube.position.z = -3.2
 scene.add(cube)
 
-// camera.position.z = 3.2
+camera.position.z = 3
 
-let i = 0
+const controls = new OrbitControls(camera, renderer.domElement)
+
+controls.minDistance = 3
+controls.maxDistance = 10
+// controls.enableZoom = false
+// controls.enableRotate = false
+
+controls.enableDamping = true
+controls.dampingFactor = .5
+controls.maxPolarAngle = Math.PI / 10
+
+controls.screenSpacePanning = true
+
+// let i = 0
+
+window.addEventListener('resize', redimencionar) 
+
+function redimencionar() {
+    console.log('redimencionando')
+    camera.aspect = window.innerWidth/window.innerHeight
+    camera.updateProjectionMatrix()
+    renderer.setSize(window.innerWidth, window.innerHeight)
+    renderer.render(scene, camera)
+}
+
 export const animate = () => {
     requestAnimationFrame(animate)
 
-    camera.lookAt(newCamera.position)
-    camera.position.x = Math.cos(i) * 30
-    camera.position.z = Math.sin(i) * 30
+    // camera.lookAt(newCamera.position)
+    // camera.position.x = Math.cos(i) * 30
+    // camera.position.z = Math.sin(i) * 30
 
-    i += 0.01
-    // cube.rotation.x += 0.01
-    // cube.rotation.y += 0.01
+    // i += 0.01
+    cube.rotation.x += 0.01
+    cube.rotation.y += 0.01
     
     renderer.render(scene, camera)
 }
