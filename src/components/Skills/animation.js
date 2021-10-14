@@ -23,8 +23,64 @@ scene.add(new HemisphereLight(0xffffff))
 
 export const pControl = new PointerLockControls(camera, renderer.domElement)
 
+let xdir = 0
+let zdir = 0
+
+document.addEventListener('keydown', e => {
+    switch (e.keyCode) {
+        case 65:
+            xdir -= 1
+            break
+        case 87:
+            zdir += 1
+            break
+        case 68:
+            xdir += 1
+            break
+        case 83:
+            zdir -= 1
+            break
+    }
+} )
+
+document.addEventListener('keyup', e => {
+    switch (e.keyCode) {
+        case 65:
+            xdir = 0
+            break
+        case 87:
+            zdir = 0
+            break
+        case 68:
+            xdir = 0
+            break
+        case 83:
+            zdir = 0
+            break
+    }    
+} )
+
+let tiempoI, tiempoF, vel, delta
+
+tiempoI = Date.now()
+vel = 25
+
 export const animate = () => {
     requestAnimationFrame(animate)
+
+    if (pControl.isLocked) {
+        tiempoF = Date.now()
+    
+        delta = (tiempoF - tiempoI) / 1000
+    
+        let xDis = xdir * vel * delta
+        let zDis = zdir * vel * delta
+    
+        pControl.moveRight(xDis)
+        pControl.moveForward(zDis)
+    
+        tiempoI = tiempoF
+    }
     renderer.render(scene, camera)
 }
 
