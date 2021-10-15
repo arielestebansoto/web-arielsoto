@@ -1,27 +1,30 @@
 import React, { useEffect } from 'react'
 
 import { SectionContainer, TitleContainer, Title, SkillsCharset, SkillItem } from './styles'
-import { animationElement, animate } from './animation'
+
+import { animation } from '../Animation'
 
 export const Skills = () => {
     const skills = [ 'React', 'React-Router', 'Redux', 'Bootstrap', 'Styled-Components', 'Git Hub', 'Webpack', 'Material UI', 'NodeJS', 'Linux', ,
     ]
-
-    useEffect( () => {
-        document.querySelector('#animationContainer').appendChild(animationElement)
-        animate()
-    })
     
+    useEffect( () => {
+        document.querySelector('#animation').appendChild(animation)
+    })
     return (
-        <SectionContainer id='animationContainer'>
+        <SectionContainer>
             <TitleContainer>
                 <Title>skills</Title>
             </TitleContainer>
-            <SkillsCharset>
+        <div id="animation">
+
+        </div>
+
+            {/* <SkillsCharset>
                 {
                     skills.map( (element, index) => <SkillItem key={index}>{element}</SkillItem>)
                 }
-            </SkillsCharset>
+            </SkillsCharset> */}
         </SectionContainer>
     )
 }
