@@ -1,32 +1,36 @@
 import React, { useEffect } from 'react'
 
 import { SectionContainer, TitleContainer, Title, SkillsCharset, SkillItem } from './styles'
-import { animationElement, animate, pControl } from './animation'
+
+import { animation } from '../Animation'
+import { pointerLockControls } from '../Animation/pointerLookControls'
+
 
 export const Skills = () => {
     const skills = [ 'React', 'React-Router', 'Redux', 'Bootstrap', 'Styled-Components', 'Git Hub', 'Webpack', 'Material UI', 'NodeJS', 'Linux', ,
     ]
-
+    
     useEffect( () => {
-        document.querySelector('#animationContainer').appendChild(animationElement)   
+        document.querySelector('#animation').appendChild(animation)
     })
-    animate()
-    const handleClick = () => {
-        console.log('pControl')
-        pControl.lock()
-    }
-     
+
+    const activePointerLockcontrols = () => pointerLockControls.lock()
+    
     return (
-        <SectionContainer id='animationContainer'>
+        <SectionContainer>
             <TitleContainer>
                 <Title>skills</Title>
             </TitleContainer>
-            <SkillsCharset>
+        <div id="animation">
+            <button id="play" onClick={activePointerLockcontrols} style={{height: '50ox', width: '75px'}}>play</button>
+        </div>
+
+            {/* <SkillsCharset>
                 {
                     skills.map( (element, index) => <SkillItem key={index}>{element}</SkillItem>)
                 }
-            </SkillsCharset>
-            <button id="btnPlay" onClick={handleClick}>Play</button>
+
+            </SkillsCharset> */}
         </SectionContainer>
     )
 }
