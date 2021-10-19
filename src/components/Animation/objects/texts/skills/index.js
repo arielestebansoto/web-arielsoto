@@ -2,7 +2,6 @@ import { Mesh, MeshPhongMaterial } from 'three'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 import { scene } from '../../../scene'
-// import helvertiker from 'three/examples/fonts/helvetiker_regular.typeface.json'
 
 const loader = new FontLoader()
 
@@ -14,8 +13,8 @@ export const textSkills = () => {
                 'skills',  
                 {
                     font: font,
-                    size: 6,
-                    height: 2,
+                    size: 2,
+                    height: .5,
                 }
             )
 

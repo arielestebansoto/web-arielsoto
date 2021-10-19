@@ -1,36 +1,30 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { SectionContainer, TitleContainer, Title, SkillsCharset, SkillItem } from './styles'
 
+import { Animation, AnimationContainer, AnimationControls } from './animationStyles'
 import { animation } from '../Animation'
-import { pointerLockControls } from '../Animation/pointerLookControls'
+import { pointerLockControls, playPointerLockControls } from '../Animation/pointerLookControls'
 
 
 export const Skills = () => {
-    const skills = [ 'React', 'React-Router', 'Redux', 'Bootstrap', 'Styled-Components', 'Git Hub', 'Webpack', 'Material UI', 'NodeJS', 'Linux', ,
-    ]
-    
     useEffect( () => {
-        document.querySelector('#animation').appendChild(animation)
+        document.querySelector('#animation-container').appendChild(animation)
     })
 
-    const activePointerLockcontrols = () => pointerLockControls.lock()
+    const activePointerLockcontrols = (e) => playPointerLockControls(e)
     
     return (
         <SectionContainer>
             <TitleContainer>
                 <Title>skills</Title>
             </TitleContainer>
-        <div id="animation">
-            <button id="play" onClick={activePointerLockcontrols} style={{height: '50ox', width: '75px'}}>play</button>
-        </div>
-
-            {/* <SkillsCharset>
-                {
-                    skills.map( (element, index) => <SkillItem key={index}>{element}</SkillItem>)
-                }
-
-            </SkillsCharset> */}
+        <Animation id="animation">
+            <AnimationContainer id="animation-container" style={{border :"1px solid red"}}></AnimationContainer>
+            <AnimationControls className="animation-controls">
+                <button id="play" onClick={activePointerLockcontrols} style={{height: '50px', width: '75px'}}>play</button>
+            </AnimationControls>
+        </Animation>
         </SectionContainer>
     )
 }

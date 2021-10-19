@@ -63,3 +63,25 @@ function animate() {
   requestAnimationFrame(animate);
   }
   
+  export const playPointerLockControls = (e) => {
+        const animation = document.querySelector('#animation')
+        const coord = animation.getBoundingClientRect()
+        const positionY = coord.top + scrollY
+        window.scrollTo(0, positionY )  
+
+        pointerLockControls.lock()      
+  }
+
+  function isScrolling(e) {
+    if(['Spave', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].indexOf(e.code) > -1) {
+        e.preventDefault()
+    }
+  }
+  
+  pointerLockControls.addEventListener('lock', () => {
+      window.addEventListener('keydown', isScrolling )    
+  })
+
+    pointerLockControls.addEventListener('unlock', () => {
+     window.removeEventListener('keydown', isScrolling)
+  })
