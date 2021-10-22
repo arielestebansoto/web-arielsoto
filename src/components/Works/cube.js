@@ -8,7 +8,7 @@ export const CubeContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 75vh;
     width: 100%;
 
     perspective: ${size(10)};
@@ -19,11 +19,7 @@ export const Scene = styled.div`
     transform-style: preserve-3d;
 
     transition: transform 1s linear;
-    // animation: sceneRotate 30s infinite linear;
 
-    // @keyframes sceneRotate {
-    //     to { transform: rotateY(360deg) }
-    // }
     &.project-1 {
         transform: rotateY(90deg)
     }
@@ -62,11 +58,8 @@ export const Cube = styled.div`
     & > .left { transform: rotateY(270deg) translateZ(${size(1.7)})}
 
     & > div {
-        background: rgba( ${bgColor} .7 );
+        background: white;
         box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.37 );
-        filter: blur( 1px );
-        border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.5 );
     }
 `
 
@@ -85,7 +78,6 @@ export const TurnRight = styled.div`
     background: red;
 
     &:hover ~ .Scene {
-        // animation-play-state: paused;
         transform: rotateY(-90deg) ;
     }
 `
@@ -99,7 +91,6 @@ export const TurnLeft = styled.div`
     background: blue;
 
     &:hover ~ .Scene {
-        // animation-play-state: paused;
         transform: rotateY(90deg) ;
     }
 `

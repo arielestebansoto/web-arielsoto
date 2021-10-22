@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { Container, Row, Col, Button } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
+import { Button } from './styles'
 
 export const CubeControls = () =>  {
 
@@ -31,19 +32,19 @@ export const CubeControls = () =>  {
             const toRotation = rotation + currentRotationValue
             return scene.style.transform = `rotateY(${toRotation}deg)`
         }
-        if (e.target.innerHTML === 'back') {
+        if (e.target.id === 'backward') {
             return rotate(90) 
         }
-        if (e.target.innerHTML === 'foward') {
+        if (e.target.id === 'foward') {
              return rotate(-90)
         }
     }
     return <Row>
-            <Col>
-                <Button onClick={handleClick}>back</Button>
+            <Col className="text-center">
+                <Button id="backward" onClick={handleClick}>back</Button>
             </Col>
-            <Col>
-                <Button onClick={handleClick}>foward</Button>
+            <Col className="text-center">
+                <Button id="foward" onClick={handleClick}>foward</Button>
             </Col>
         </Row>
 

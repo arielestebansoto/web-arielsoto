@@ -2,10 +2,7 @@ import styled from "styled-components";
 
 export const SectionContainer = styled.div`
     margin-bottom: 32px;
-`
-export const Ul = styled.ul`
-    list-style: none;
-    padding-inline-start: 0;
+    height: 100vh;
 `
 
 export const TitleContainer = styled.div`

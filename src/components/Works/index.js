@@ -10,9 +10,6 @@ export const Works = () =>
         <TitleContainer>
             <Title>works</Title>
         </TitleContainer>
-
-        <CubeControls />
-
         <CubeContainer>
             <Scene className="Scene" id="Scene">
                 <Cube className="Cube"> 
@@ -24,4 +21,6 @@ export const Works = () =>
             </Scene>
         </CubeContainer>
 
+        <CubeControls />
+        
     </SectionContainer>
