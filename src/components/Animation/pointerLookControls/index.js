@@ -36,11 +36,83 @@ document.addEventListener('keyup', e => {
                 xdir = 0
         case 'KeyS':
             zdir = 0
-        break
+            break
+            default: return
+        }
+    })
+    
+export const movePositionCamera = (e) => {
+    switch(e.target.id) {
+        case 'control-1':
+            xdir = -1
+            zdir = 1
+            break
+        case 'control-2':
+            zdir = 1
+            break
+        case 'control-3':
+            xdir = 1
+            zdir = 1
+            break
+        case 'control-4':
+            xdir = -1
+            break
+        case 'control-5':
+            return
+            break
+        case 'control-6':
+            xdir = 1
+            break
+        case 'control-7':
+            xdir = -1
+            zdir = -1
+            break
+        case 'control-8':
+            zdir = -1
+            break
+        case 'control-9':
+            xdir = 1
+            zdir = -1
+            break
+        default: return
+    }          
+}
+export const stopPositionCamera = (e) => {
+    switch(e.target.id) {
+        case 'control-1':
+            xdir = 0
+            zdir = 0
+            break
+        case 'control-2':
+            zdir = 0
+            break
+        case 'control-3':
+            xdir = 0
+            zdir = 0
+            break
+        case 'control-4':
+            xdir = 0
+            break
+        case 'control-5':
+            return
+            break
+        case 'control-6':
+            xdir = 0
+            break
+        case 'control-7':
+            xdir = 0
+            zdir = 0
+            break
+        case 'control-8':
+            zdir = 0
+            break
+        case 'control-9':
+            xdir = 0
+            zdir = 0
+            break
         default: return
     }
-})
-
+}
 let timeI = Date.now()
 let vel = 0.005
 
