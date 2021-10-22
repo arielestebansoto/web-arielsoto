@@ -4,6 +4,9 @@ const size = (factor) =>  75 * factor + 'px'
 const bgColor = '43, 81, 97,'
 
 export const CubeContainer = styled.div`
+    position: absolute;
+    top: 8%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,12 +64,13 @@ export const Cube = styled.div`
         background: white;
         box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.37 );
     }
-`
-
-export const CubeSide = styled.div `
+    `
+    
+    export const CubeSide = styled.div `
     position: absolute;
     width: 100%;
     height: 100%;
+    
 `
 
 export const TurnRight = styled.div`

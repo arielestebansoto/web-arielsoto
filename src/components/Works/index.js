@@ -1,12 +1,12 @@
 import React from 'react'
 
-import { SectionContainer, TitleContainer, Title, Ul } from './styles'
+import { SectionContainer, TitleContainer, Title } from './styles'
 import { CubeContainer, Scene, Cube, CubeSide } from './cube'
 import { ItemProject } from '../ItemProject'
 import { CubeControls } from '../CubeControls'
 
 export const Works = () => 
-    <SectionContainer>
+    <SectionContainer className="SectionContainer">
         <TitleContainer>
             <Title>works</Title>
         </TitleContainer>
@@ -22,5 +22,5 @@ export const Works = () =>
         </CubeContainer>
 
         <CubeControls />
-        
+
     </SectionContainer>

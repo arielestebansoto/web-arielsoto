@@ -1,8 +1,19 @@
 import styled from 'styled-components'
 
-export const Button = styled.button`
-    display: inline-block;
-    text-align: center;
+export const ButtonsContainer = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    position: absolute;
+    bottom: 8%;
+    width: 100%;
+    height: 50px
+`
+
+export const ButtonCube = styled.button`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100px;
     height: 50px;
 
