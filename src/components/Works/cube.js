@@ -60,9 +60,19 @@ export const Cube = styled.div`
     & > .right { transform: rotateY(90deg) translateZ(${size(1.7)})}
     & > .left { transform: rotateY(270deg) translateZ(${size(1.7)})}
 
-    & > div {
-        background: white;
-        box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.37 );
+    // & > div {
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     background: #0f2027;
+    //     border-radius: 15px;
+    //     box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.37 );
+
+    //     transition: background 1s ease-in;
+
+    //     &:hover {
+    //         background: white
+    //     }
     }
     `
     
