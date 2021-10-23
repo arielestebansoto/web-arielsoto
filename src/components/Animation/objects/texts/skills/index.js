@@ -3,18 +3,19 @@ import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 import { scene } from '../../../scene'
 
+import { FONT_URL, FONT_HEIGHT, FONT_SIZE } from '../../../variables'
 const loader = new FontLoader()
 
 export const textSkills = () => {
 
-    loader.load('https://dl.dropboxusercontent.com/s/wjnohcz26odo5ak/Azonix_Regular.json?dl=0', function ( font ) {
+    loader.load(FONT_URL, function ( font ) {
 
             const text = new TextGeometry(
                 'skills',  
                 {
                     font: font,
-                    size: 2,
-                    height: .5,
+                    size: FONT_SIZE,
+                    height: FONT_HEIGHT,
                 }
             )
 
@@ -23,6 +24,9 @@ export const textSkills = () => {
                     new MeshPhongMaterial({ color: 0x5c2301 })
                 ])
 
+            textMesh.position.x = -5
+            textMesh.position.y = 1
+            textMesh.position.z = -1
             scene.add(textMesh)
         })
 }
