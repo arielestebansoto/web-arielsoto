@@ -7,6 +7,7 @@ import { pointerLockControls } from './pointerLookControls'
 
 import { directionalLight } from './directionalLight'
 
+import { floor } from './floor'
 import { textSkills } from './objects/texts/skills'
 import { textReact } from './objects/texts/react'
 

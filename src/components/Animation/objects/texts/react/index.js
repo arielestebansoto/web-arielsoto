@@ -3,7 +3,7 @@ import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 import { scene } from '../../../scene'
 
-import { FONT_URL, FONT_HEIGHT, FONT_SIZE } from '../../../variables'
+import { FONT_URL, FONT_HEIGHT, FONT_SIZE, FONT_COLOR_PRIMARY, FONT_COLOR_SECONDARY } from '../../../variables'
 const loader = new FontLoader()
 
 export const textReact = () => {
@@ -20,8 +20,8 @@ export const textReact = () => {
             )
 
             const textMesh = new Mesh(text, [
-                    new MeshPhongMaterial({ color: 0xad4000 }),
-                    new MeshPhongMaterial({ color: 0x5c2301 })
+                    new MeshPhongMaterial({ color: FONT_COLOR_PRIMARY }),
+                    new MeshPhongMaterial({ color: FONT_COLOR_SECONDARY })
                 ])
             textMesh.position.x = 5
             textMesh.position.z = 1

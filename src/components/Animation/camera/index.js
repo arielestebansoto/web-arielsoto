@@ -6,4 +6,5 @@ const far = 50
 
 export const camera = new PerspectiveCamera(fov, aspect, near, far)
 
-camera.position.set(0, .5, 5)
+camera.position.set(0, 1, 5)
+camera.rotateX = Math.PI
