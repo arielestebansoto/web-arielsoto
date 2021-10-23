@@ -16,7 +16,7 @@ export const Works = () =>
                     <CubeSide className='front'><CardProject href="/" target="blank" title="arielestebansoto.com" description="React, React-Bootstrap" /></CubeSide>
                     <CubeSide className='back'><CardProject href="https://arielestebansoto.github.io/mercado-libre-home/" target="_blank" title="Mercado Libre Home" description="HTML y CSS vanilla"/></CubeSide>
                     <CubeSide className='left'><CardProject href="https://arielestebansoto.github.io/breaking-bad-api/" target="_blank" title="Breaking Bad Api" description="HTML, CSS y JSvanilla"/> </CubeSide>
-                    <CubeSide className='right'> Pagina web numer no4 </CubeSide>
+                    <CubeSide className='right'></CubeSide>
                 </Cube>
             </Scene>
         </CubeContainer>
