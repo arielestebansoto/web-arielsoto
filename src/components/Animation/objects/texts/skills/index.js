@@ -25,8 +25,10 @@ export const textSkills = () => {
                 ])
 
             textMesh.position.x = -5
-            textMesh.position.y = 1
             textMesh.position.z = -1
+
+            textMesh.receiveShadow = true
+            textMesh.castShadow = true
             scene.add(textMesh)
         })
 }

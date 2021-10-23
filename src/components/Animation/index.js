@@ -4,6 +4,9 @@ import { scene } from './scene'
 
 import { orbitControls } from './orbitControls'
 import { pointerLockControls } from './pointerLookControls'
+
+import { directionalLight } from './directionalLight'
+
 import { textSkills } from './objects/texts/skills'
 import { textReact } from './objects/texts/react'
 

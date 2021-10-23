@@ -6,8 +6,9 @@ export const renderer = new WebGLRenderer()
 
 renderer.setSize(window.innerWidth, window.innerHeight)
 
-window.addEventListener('resize', animationResize)
+renderer.shadowMap.enabled = true
 
+window.addEventListener('resize', animationResize)
 function animationResize () {
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
@@ -15,4 +16,5 @@ function animationResize () {
     
     renderer.render(scene, camera)
 }
+
 
