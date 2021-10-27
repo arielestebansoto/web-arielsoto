@@ -1,7 +1,6 @@
 import { Mesh, MeshPhongMaterial } from 'three'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
-import { scene } from '../../../scene'
 
 import { FONT_URL, FONT_HEIGHT, FONT_SIZE, FONT_COLOR_PRIMARY, FONT_COLOR_SECONDARY } from '../../../variables'
 const loader = new FontLoader()
