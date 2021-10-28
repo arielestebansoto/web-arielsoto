@@ -46,8 +46,25 @@ scene.background = new Color(SCENE_BACKGROUND_COLOR)
 const pointerLockControls = new PointerLockControls(camera, renderer.domElement )
 
 let xdir = 0, zdir = 0
+ 
+export const scrollAnimation = () => {
+    const animation = document.querySelector('#animation')
+    const coord = animation.getBoundingClientRect()
+    const positionY = coord.top + scrollY
+    window.scrollTo(0, positionY )  
+}
+export const playPointerLockControls = () => {
+    scrollAnimation()
+    pointerLockControls.lock()      
+}
 
-document.addEventListener('keydown', e => {
+  function isScrolling(e) {
+    if(['Spave', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].indexOf(e.code) > -1) {
+        e.preventDefault()
+    }
+  }
+  
+function pcKeyDown(e) {
     switch(e.code) {
         case 'KeyA':
             xdir = -1
@@ -63,8 +80,8 @@ document.addEventListener('keydown', e => {
         break
         default: return
     }
-})
-document.addEventListener('keyup', e => {
+}
+function pcKeyUp(e) {
     switch(e.code) {
         case 'KeyA':
             xdir = 0
@@ -79,30 +96,18 @@ document.addEventListener('keyup', e => {
         break
         default: return
     }
-})
-  
-export const playPointerLockControls = () => {
-    const animation = document.querySelector('#animation')
-    const coord = animation.getBoundingClientRect()
-    const positionY = coord.top + scrollY
-    window.scrollTo(0, positionY )  
-
-    pointerLockControls.lock()      
 }
-
-  function isScrolling(e) {
-    if(['Spave', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].indexOf(e.code) > -1) {
-        e.preventDefault()
-    }
-  }
-  
-  pointerLockControls.addEventListener('lock', () => {
-      window.addEventListener('keydown', isScrolling )    
+pointerLockControls.addEventListener('lock', () => {
+    window.addEventListener('keydown', isScrolling )
+    document.addEventListener('keydown', pcKeyDown)    
+    document.addEventListener('keyup', pcKeyUp)    
   })
 
-    pointerLockControls.addEventListener('unlock', () => {
-     window.removeEventListener('keydown', isScrolling)
-  })
+pointerLockControls.addEventListener('unlock', () => {
+    window.removeEventListener('keydown', isScrolling)
+    document.removeEventListener('keydown', pcKeyDown)    
+    document.removeEventListener('keyup', pcKeyUp)    
+})
 
 /* DIRECTIONAL LIGHT */
 const directionalLight = new DirectionalLight(0xffffff, 1)
@@ -174,6 +179,7 @@ document.addEventListener('keyup', e => {
         default: return
     }
 })
+
 /* ANIMATION */
 // let timeI = Date.now()
 /* without time Variables */
