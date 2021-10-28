@@ -8,11 +8,23 @@ export const Animation = styled.div`
 export const AnimationContainer = styled.div``
 
 export const AnimationControls = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+
     width: 100%;
-    height: 25%;    
     position: absolute;
     bottom: 0;
 
     background-color: rgba(0, 0, 0, .3)
+    
+    `
+    export const AnimationKeyboard = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 50px);
+`
 
+export const AnimationKeyboardPC = styled.div`
 `
