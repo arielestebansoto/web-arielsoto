@@ -1,9 +1,9 @@
 import { WebGLRenderer, Scene, GridHelper, Color, PerspectiveCamera, Mesh, MeshPhongMaterial, PlaneGeometry, DirectionalLight } from 'three'
 import { PointerLockControls } from 'three/examples/jsm/controls/PointerLockControls' 
-import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
-import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
+import { createText } from './objects/texts'
 
-import { FLOOR_COLOR, FLOOR_SIZE_X, FLOOR_SIZE_Y, FONT_URL, FONT_HEIGHT, FONT_SIZE, FONT_COLOR_PRIMARY, FONT_COLOR_SECONDARY, SCENE_BACKGROUND_COLOR } from './variables'
+
+import { FLOOR_COLOR, FLOOR_SIZE_X, FLOOR_SIZE_Y, SCENE_BACKGROUND_COLOR } from './variables'
 
 
 /* RENDERER */
@@ -29,15 +29,13 @@ const aspect = window.innerWidth / window.innerHeight
 const near = 0.1
 const far = 50
 
-const camera = new PerspectiveCamera(fov, aspect, near, far)
+export const camera = new PerspectiveCamera(fov, aspect, near, far)
 
 camera.position.set(0, 1, 5)
 camera.rotateX = Math.PI
 
 /* SCENE */
-
-
-const scene = new Scene()
+export const scene = new Scene()
 
 scene.background = new Color(SCENE_BACKGROUND_COLOR) 
 // scene.add(new GridHelper(50, 50))
@@ -130,30 +128,7 @@ floor.rotation.x = -  Math.PI  / 2
 floor.receiveShadow = true
 
 /* TEXTS */
-const loader = new FontLoader()
-
-loader.load(FONT_URL, function ( font ) {
-        const textGeo= new TextGeometry(
-            'skills',  
-            {
-                font: font,
-                size: FONT_SIZE,
-                height: FONT_HEIGHT,
-            }
-        )
-
-        const text = new Mesh(textGeo, [
-                new MeshPhongMaterial({ color: FONT_COLOR_PRIMARY }),
-                new MeshPhongMaterial({ color: FONT_COLOR_SECONDARY })
-            ])
-
-        text.position.x = -5
-        text.position.z = -1
-
-        text.receiveShadow = true
-        text.castShadow = true
-        scene.add(text)
-    })
+createText()
 
 let rot = 0, postZ = 0
 export const mobileTouchStart = (e) => {
@@ -211,8 +186,8 @@ function animate() {
     pointerLockControls.moveForward(zDir)
     
     camera.translateZ(postZ)
-    camera.rotateY(rot * vel * delta * 0.5 ) 
-    
+    camera.rotateY(rot * vel * delta * 0.5 )    
+
     renderer.render(scene, camera);
     
     requestAnimationFrame(animate);
