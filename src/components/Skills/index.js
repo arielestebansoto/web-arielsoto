@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { SectionContainer, TitleContainer, Title, SkillsCharset, SkillItem } from './styles'
 
 import { Animation, AnimationContainer, AnimationControls, AnimationKeyboard, AnimationKeyboardPC } from './animationStyles'
-import { animation, playPointerLockControls, scrollAnimation } from '../Animation'
+import { animation, playPointerLockControls, scrollAnimation, mobileTouchStart, mobileTouchEnd } from '../Animation'
 
 
 export const Skills = () => {
@@ -13,6 +13,10 @@ export const Skills = () => {
 
     const activatePlayPointerLockControls = () => playPointerLockControls()
     const centeredWindow = () => scrollAnimation()
+
+    const handleTouchStart = (e) => mobileTouchStart(e)
+    const handleTouchEnd = (e) => mobileTouchEnd(e)
+
     return (
         <SectionContainer>
             <TitleContainer>
@@ -24,8 +28,17 @@ export const Skills = () => {
                 <button onClick={centeredWindow} style={{height: '50px', width: '75px'}}>play</button>  
                 <AnimationKeyboard >
                     {
-                        [1, 2, 3, 4, 5, 6, 7, 8, 9].map((div, index) =>
-                        <div key={index} className={`key-${index}`} style={{border: '1px solid rgba(255,255,255, .3'}}>{`key-${index}`}</div>
+                        [1, 2, 3, 4].map((div, index) =>
+                        <div 
+                            onTouchStart={handleTouchStart}
+                            onTouchEnd={handleTouchEnd}
+                            key={index} 
+                            className={`key-${index}`}
+                            id={`key-${index}`} 
+                            style={{border: '1px solid rgba(255,255,255, .3'}}
+                        >
+                            {`key-${index}`}
+                        </div>
                         )
                     }
                 </AnimationKeyboard>

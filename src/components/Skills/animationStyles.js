@@ -22,8 +22,9 @@ export const AnimationControls = styled.div`
     `
     export const AnimationKeyboard = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, 50px);
-    grid-template-rows: repeat(3, 50px);
+    grid-template-columns: repeat(2, 75px);
+    grid-template-rows: repeat(2, 75px);
+
 `
 
 export const AnimationKeyboardPC = styled.div`

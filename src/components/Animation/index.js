@@ -155,30 +155,42 @@ loader.load(FONT_URL, function ( font ) {
         scene.add(text)
     })
 
-let rot = 0
-
-document.addEventListener('keydown', e => {
-    switch (e.code) {
-        case 'KeyQ':
+let rot = 0, postZ = 0
+export const mobileTouchStart = (e) => {
+    switch (e.target.id) {
+        case 'key-0':
+            postZ = -1
+        break
+        case 'key-1':
             rot = 1
         break
-        case 'KeyE':
+        case 'key-2':
+            postZ = 1
+        break
+        case 'key-3':
             rot = -1
         break
         default: return
     }
-})
-document.addEventListener('keyup', e => {
-    switch (e.code) {
-        case 'KeyQ':
+}
+export const mobileTouchEnd = (e) => {
+    switch (e.target.id) {
+        case 'key-0':
+            postZ = 0
+        break
+        case 'key-1':
             rot = 0
         break
-        case 'KeyE':
+        case 'key-2':
+            postZ = 0
+        break
+        case 'key-3':
             rot = 0
         break
         default: return
     }
-})
+}
+
 
 /* ANIMATION */
 // let timeI = Date.now()
@@ -198,6 +210,7 @@ function animate() {
     pointerLockControls.moveRight(xDir)
     pointerLockControls.moveForward(zDir)
     
+    camera.translateZ(postZ)
     camera.rotateY(rot * vel * delta * 0.5 ) 
     
     renderer.render(scene, camera);
