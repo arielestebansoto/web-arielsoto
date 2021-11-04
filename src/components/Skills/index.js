@@ -5,7 +5,7 @@ import { SectionContainer, TitleContainer, Title, SkillsCharset, SkillItem } fro
 
 import { Animation, AnimationContainer, AnimationControls, AnimationKeyboard, AnimationKeyboardPC } from './animationStyles'
 import { animation, playPointerLockControls, scrollAnimation, mobileTouchStart, mobileTouchEnd } from '../Animation'
-
+import { KeyboardMobile } from '../KeyboardMobile'
 
 export const Skills = () => {
     React.useEffect( () => {
@@ -17,10 +17,7 @@ export const Skills = () => {
         setIsPlaying('mobile')
     }
 
-    const handleClickPc = () => {
-        setIsPlaying('pc')
-        return playPointerLockControls()
-    }
+    const handleClickPc = () => playPointerLockControls()
 
     const handleTouchStart = (e) => mobileTouchStart(e)
     const handleTouchEnd = (e) => mobileTouchEnd(e)
@@ -32,28 +29,17 @@ export const Skills = () => {
             </TitleContainer>
         <Animation id="animation">
             <AnimationContainer id="animation-container" />
-            <MobileView>
-                <AnimationKeyboard >
-                        {
-                            [1, 2, 3, 4].map((div, index) =>
-                            <div 
-                                onTouchStart={handleTouchStart}
-                                onTouchEnd={handleTouchEnd}
-                                key={index} 
-                                className={`key-${index}`}
-                                id={`key-${index}`} 
-                                style={{border: '1px solid rgba(255,255,255, .3'}}
-                            >
-                                {`key-${index}`}
-                            </div>
-                            )
-                        }
-                    </AnimationKeyboard>
-            </MobileView>
-            <BrowserView>
-                <button onClick={handleClickPc} style={{height: '50px', width: '75px'}} >play PC only</button>
-            </BrowserView>
-
+            <AnimationControls >
+                <MobileView>
+                    <KeyboardMobile 
+                        handleTouchStart={handleTouchStart}
+                        handleTouchEnd={handleTouchEnd}
+                    />            
+                </MobileView>
+                <BrowserView>
+                    <button onClick={handleClickPc} style={{height: '50px', width: '75px'}} >play PC only</button>
+                </BrowserView>
+            </AnimationControls>
         </Animation>
         </SectionContainer>
     )

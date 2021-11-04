@@ -137,13 +137,13 @@ export const mobileTouchStart = (e) => {
             postZ = -1
         break
         case 'key-1':
-            rot = 1
+            rot = -1
         break
         case 'key-2':
-            postZ = 1
+            rot = 1
         break
         case 'key-3':
-            rot = -1
+            postZ = 1
         break
         default: return
     }
@@ -157,10 +157,10 @@ export const mobileTouchEnd = (e) => {
             rot = 0
         break
         case 'key-2':
-            postZ = 0
+            rot = 0
         break
         case 'key-3':
-            rot = 0
+            postZ = 0
         break
         default: return
     }
