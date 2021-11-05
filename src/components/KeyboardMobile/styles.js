@@ -11,23 +11,68 @@ export const KeyboardMobileGrid = styled.div`
     left: 50%;
     transform: 
         translateX(-50%)
-        // rotate(45deg)
-    ;
-
-    // display: inline-grid;
-    // grid-template: repeat(2,50px) / repeat(2,50px);
-    
+        rotate(45deg)
+    ;    
     width: 100px;
     height: 100px;
-    
-    border: 1px solid white;
 
     border-radius: 50%;
-    
+
     & > div {
+        position: absolute;
+
         width: 50px;
         height: 50px;
-        border: 1px solid red;
-        border-radius: 100% 0 0 0 ;
+        border: 1px solid rgba(255, 255, 255, .3);
+        border-radius: 100% 0 0 0;
+        
+        
+        background: rgba(255, 255, 255, 0);
+        
+        &:hover {
+            animation: touch .2s linear;
+        }
+
+        @keyframes touch {
+            0%, 100% {
+                background-color: rgba(255, 255, 255, 0);
+            }
+            20% {
+                background-color: rgba(255, 255, 255, 1);
+            }
+        }
     }
+    ${ rotateDivs() }
 `
+function rotateDivs() {
+    let styles = ''
+
+    let topFactor = 0
+    let leftFactor = 0
+
+    for (let i = 0; i < 4; i ++) {
+        switch(i) {
+            case 1:
+                leftFactor = .5 
+            break
+            case 2:
+                topFactor = .5
+            break
+            case 3:
+                leftFactor = 0
+            default: null
+        }
+
+        styles +=  `
+            & > div:nth-child(${i + 1}) {
+                top: ${100 * topFactor }%;
+                left: ${100 * leftFactor}%;
+                transform: 
+                    rotate(${ 90 * i }deg)
+                ;
+            }
+        `
+    }
+
+    return styles
+}

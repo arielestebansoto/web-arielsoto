@@ -30,7 +30,6 @@ export const createText = () => {
                 ])
                 
             scene.add(textMesh)
-            console.log(textMesh)
             
             textMesh.position.x = text.position.x
             textMesh.position.z = text.position.z
