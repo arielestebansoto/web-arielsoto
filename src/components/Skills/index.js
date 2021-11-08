@@ -1,15 +1,13 @@
 import React from 'react'
-import { BrowserView, MobileView } from 'react-device-detect'
+import { BrowserView, MobileView, TabletView } from 'react-device-detect'
 
-import { SectionContainer, TitleContainer, Title, SkillsCharset, SkillItem } from './styles'
+import { SectionContainer, TitleContainer, Title } from './styles'
 
-import { Animation, AnimationContainer, AnimationControls, AnimationKeyboard, AnimationKeyboardPC } from './animationStyles'
-import { animation, playPointerLockControls, scrollAnimation } from '../Animation'
+import { Animation, AnimationContainer, AnimationControls } from './animationStyles'
+import { animation, playPointerLockControls } from '../Animation'
 import { KeyboardMobile } from '../KeyboardMobile'
 
 export const Skills = () => {
-
-
     React.useEffect( () => {
         document.querySelector('#animation-container').appendChild(animation)
     }, [])
@@ -24,12 +22,19 @@ export const Skills = () => {
         <Animation id="animation">
             <AnimationContainer id="animation-container" />
             <AnimationControls >
+
                 <MobileView>
                     <KeyboardMobile />            
                 </MobileView>
+
+                <TabletView>
+                    <KeyboardMobile />            
+                </TabletView>
+                
                 <BrowserView>
                     <button onClick={handleClickPc} style={{height: '50px', width: '75px'}} >play PC only</button>
                 </BrowserView>
+
             </AnimationControls>
         </Animation>
         </SectionContainer>
