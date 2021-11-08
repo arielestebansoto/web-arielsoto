@@ -26,13 +26,12 @@ export const KeyboardMobileGrid = styled.div`
         border: 1px solid rgba(255, 255, 255, .3);
         border-radius: 100% 0 0 0;
         
-        
         background: rgba(255, 255, 255, 0);
-        
-        &:hover {
-            animation: touch .2s linear;
-        }
+    }
 
+    & > .keyboardMobile-isTouch {
+        animation: touch .2s linear;
+    
         @keyframes touch {
             0%, 100% {
                 background-color: rgba(255, 255, 255, 0);
@@ -41,6 +40,7 @@ export const KeyboardMobileGrid = styled.div`
                 background-color: rgba(255, 255, 255, 1);
             }
         }
+
     }
     ${ rotateDivs() }
 `

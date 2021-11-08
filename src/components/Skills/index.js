@@ -4,23 +4,17 @@ import { BrowserView, MobileView } from 'react-device-detect'
 import { SectionContainer, TitleContainer, Title, SkillsCharset, SkillItem } from './styles'
 
 import { Animation, AnimationContainer, AnimationControls, AnimationKeyboard, AnimationKeyboardPC } from './animationStyles'
-import { animation, playPointerLockControls, scrollAnimation, mobileTouchStart, mobileTouchEnd } from '../Animation'
+import { animation, playPointerLockControls, scrollAnimation } from '../Animation'
 import { KeyboardMobile } from '../KeyboardMobile'
 
 export const Skills = () => {
+
+
     React.useEffect( () => {
         document.querySelector('#animation-container').appendChild(animation)
     }, [])
 
-    const handleClickMobile = () => {
-        scrollAnimation()
-        setIsPlaying('mobile')
-    }
-
     const handleClickPc = () => playPointerLockControls()
-
-    const handleTouchStart = (e) => mobileTouchStart(e)
-    const handleTouchEnd = (e) => mobileTouchEnd(e)
 
     return (
         <SectionContainer>
@@ -31,10 +25,7 @@ export const Skills = () => {
             <AnimationContainer id="animation-container" />
             <AnimationControls >
                 <MobileView>
-                    <KeyboardMobile 
-                        handleTouchStart={handleTouchStart}
-                        handleTouchEnd={handleTouchEnd}
-                    />            
+                    <KeyboardMobile />            
                 </MobileView>
                 <BrowserView>
                     <button onClick={handleClickPc} style={{height: '50px', width: '75px'}} >play PC only</button>
