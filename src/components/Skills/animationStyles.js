@@ -8,6 +8,9 @@ export const Animation = styled.div`
 export const AnimationContainer = styled.div``
 
 export const AnimationControls = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+
     width: 100%;
     position: absolute;
     bottom: 0;
