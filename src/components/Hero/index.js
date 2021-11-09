@@ -1,17 +1,10 @@
 import React from 'react'
 
-import { HeroContainer, Title, SubTitle } from './style'
+import { HeroContainer, Title } from './style'
 
 export const Hero = () => 
     <HeroContainer> 
         <Title>
-            <span>Hi,</span>
-            <br/>
-            <span>I'm Ariel,</span>
-            <br/>
-            <span>web developer.</span>
+            ARIEL
         </Title>
-        <SubTitle>
-            React developer
-        </SubTitle>
     </HeroContainer >

@@ -1,12 +1,15 @@
 import React from 'react'
 
-import { Header } from '../../components/Header'
-import { Main } from '../../components/Main'
+import { Hero } from '../../components/Hero'
+import { Presentation } from '../../components/Presentation'
 import { Works } from '../../components/Works'
-import { Skills } from '../../components/Skills'
+import { Contact } from '../../components/Contact'
+import { Footer } from '../../components/Footer'
+
 export const Home = () => <>
-        <Header />
-        <Main />
+        <Hero />
+        <Presentation />
         <Works />
-        <Skills />
-        </>
+        <Contact />     
+        <Footer />   
+</>

@@ -1,20 +1,21 @@
 import styled from "styled-components";
 
-export const SectionContainer = styled.div`
-    margin-bottom: 32px;
+export const WorksContainer = styled.section`
+`
+export const Title = styled.h2`
+    text-align: center;
+    letter-spacing: 25px;
 `
 export const Ul = styled.ul`
-    list-style: none;
+    @media screen and (min-width: 992px){
+        text-align: center;
+    }
     padding-inline-start: 0;
+    & > li {
+        list-style: none;
+    }
 `
-
-export const TitleContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-`
-
-export const Title = styled.h2`
-    font-size: 14px;
-    letter-spacing: 15px;
+export const Anchor = styled.a`
+    text-decoration: none;
+    color: white;    
 `
