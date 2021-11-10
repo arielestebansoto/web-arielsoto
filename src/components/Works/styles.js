@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const WorksContainer = styled.section`
+    margin-block-end: 50px;
 `
 export const Title = styled.h2`
     text-align: center;

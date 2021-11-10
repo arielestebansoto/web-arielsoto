@@ -5,6 +5,8 @@ export const PresentationContainer = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    margin-block-end: 50px;
 `
 
 export const PresentationContent = styled.div`

@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
-const iconSize = 24
+const iconSize = 32
 
 export const ContactContainer = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-block-end: 50px;
 `
 
 export const Title = styled.h2`
@@ -27,8 +28,16 @@ export const Ul = styled.ul`
     & > li {
         list-style: none;
     }
-    & > li > svg {
+`
+export const Anchor = styled.a`
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        color: inherit;
+    }
+    & > svg {
         width: ${iconSize}px;
-        height: ${iconSize}px;
+        height: ${iconSize}px;        
     }
 `
