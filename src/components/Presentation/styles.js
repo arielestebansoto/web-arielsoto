@@ -14,8 +14,10 @@ export const PresentationContainer = styled.section`
 export const PresentationContent = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+
     max-width: 80%;
+    height: 350px;
     text-align: center;
 `
