@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const iconSize = 32
+import { titleMarginBottom, iconSize } from "../../globalStyles";
 
 export const ContactContainer = styled.section`
     display: flex;
@@ -13,7 +13,7 @@ export const ContactContainer = styled.section`
 export const Title = styled.h2`
     width: 100%;
     text-align: center;
-    letter-spacing: 25px;
+    margin-block-end: ${titleMarginBottom}px;
 `
 
 export const Ul = styled.ul`

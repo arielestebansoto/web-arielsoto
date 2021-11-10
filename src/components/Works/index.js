@@ -1,22 +1,25 @@
 import React from 'react'
 
-import { WorksContainer, Title, Anchor, Ul } from './styles'
+import { works } from './works'
+import { WorksContainer, Title, Anchor, UlContainer, Ul, Li } from './styles'
 
 export const Works = () => {
     return (
         <WorksContainer>
             <Title>works</Title>
-            <Ul>
-                {
-                    [1, 2, 3, 4].map( (project, index) => {
-                        return <li key={index}> 
-                            <Anchor href='/' target="_blank">
-                                Project
-                            </Anchor>
-                        </li>
-                    })
-                }
-            </Ul>
+            <UlContainer>
+                <Ul>
+                    {
+                        works.map( (work, index) => {
+                            return <Li key={index}> 
+                                <Anchor href={work.href} target="_blank">
+                                    {work.title}
+                                </Anchor>
+                            </Li>
+                        })
+                    }
+                </Ul>
+            </UlContainer>
         </WorksContainer>
     )
 }
