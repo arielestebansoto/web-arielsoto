@@ -29,7 +29,28 @@ export const Ul = styled.ul`
         list-style: none;
     }
 `
+export const Li = styled.li`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: ${iconSize * 1.5}px;
+    height: ${iconSize * 1.5}px;
+
+    transition: opacity .5s ease-out;
+    opacity: .5;
+    
+    &:hover {
+        opacity: 1;
+    }
+`
 export const Anchor = styled.a`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: ${iconSize};
+    height: ${iconSize};
     text-decoration: none;
     color: inherit;
 
