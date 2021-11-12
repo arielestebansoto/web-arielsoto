@@ -10,6 +10,8 @@ export const Title = styled.h1`
     top: 30%;
     left: 15%;
 
+    ${ props => textReveal(props.animation) }
+
     font-size: 42px;
     @media screen and (min-width: 992px) {
         font-size: 83px;
@@ -62,3 +64,21 @@ export const Title = styled.h1`
     }
 }
 `
+
+function textReveal(isVisible) {
+  if (isVisible) {
+    return `
+      opacity: 1;
+      filter: blur(0);
+      transition: 
+        opacity 1s ease-in,
+        filter 1s ease-in
+        ;
+    `
+  } else {
+    return `
+      opacity: 0;
+      filter: blur(4px);
+      `
+  }
+}
