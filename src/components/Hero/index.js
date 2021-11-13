@@ -4,6 +4,7 @@ import { HeroContainer, Title } from './style'
 
 export const Hero = () => {
     const [ isVisible, setIsVisible ] = React.useState(false)
+    const [ length, setLength ] = React.useState()
 
     React.useEffect(() => {
         const options = {
@@ -19,14 +20,15 @@ export const Hero = () => {
             entries.forEach(entry => {
                 if(entry.isIntersecting) {
                     setIsVisible(true)
+                    setLength(element.children.length)
                 }
             });
           };
     })
 
     return (
-        <HeroContainer> 
-            <Title id='element' animation={isVisible}>
+        <HeroContainer > 
+        <Title id='element' isVisible={isVisible} length={length}>
                 <span>H</span>
                 <span>i</span>
                 <span>,</span>
