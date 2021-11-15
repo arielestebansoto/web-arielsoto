@@ -1,11 +1,13 @@
 import React from 'react'
 
-import { HeroContainer, Title } from './style'
+import { HeroContainer, Title } from './styles'
+import { AnimatedLetter } from '../AnimatedLetter'
 
 export const Hero = () => {
     const [ isVisible, setIsVisible ] = React.useState(false)
     const [ length, setLength ] = React.useState()
-
+    const [ isAnimationEnded, setIsAnimationEnded ] = React.useState(false)
+    
     React.useEffect(() => {
         const options = {
             rootMargin: '0px',
@@ -21,40 +23,53 @@ export const Hero = () => {
                 if(entry.isIntersecting) {
                     setIsVisible(true)
                     setLength(element.children.length)
+                    const lastElement = element.children.item(element.children.length -1)
+                    const lastElementStyles = window.getComputedStyle(lastElement)
+                    
+                    lastElement.addEventListener('animationend', () => {
+                        console.log('end')
+                        console.log(isAnimationEnded)
+                        setIsAnimationEnded(true)
+                    })
                 }
             });
-          };
-    })
+        };
+    }, [])
 
     return (
         <HeroContainer > 
-        <Title id='element' isVisible={isVisible} length={length}>
-                <span>H</span>
-                <span>i</span>
-                <span>,</span>
+        <Title 
+            id='element' 
+            isVisible={isVisible} 
+            length={length}
+            isAnimationEnded={isAnimationEnded}
+            >
+                <AnimatedLetter>H</AnimatedLetter>
+                <AnimatedLetter>i</AnimatedLetter>
+                <AnimatedLetter>,</AnimatedLetter>
                 <br />
-                <span>I</span>
-                <span>'</span>
-                <span>m&nbsp;</span>
-                <span>A</span>
-                <span>r</span>
-                <span>i</span>
-                <span>e</span>
-                <span>l</span>
-                <span>,</span>
+                <AnimatedLetter>I</AnimatedLetter>
+                <AnimatedLetter>'</AnimatedLetter>
+                <AnimatedLetter>m&nbsp;</AnimatedLetter>
+                <AnimatedLetter>A</AnimatedLetter>
+                <AnimatedLetter>r</AnimatedLetter>
+                <AnimatedLetter>i</AnimatedLetter>
+                <AnimatedLetter>e</AnimatedLetter>
+                <AnimatedLetter>l</AnimatedLetter>
+                <AnimatedLetter>,</AnimatedLetter>
                 <br />
-                <span>w</span>
-                <span>e</span>
-                <span>b&nbsp;</span>
-                <span>d</span>
-                <span>e</span>
-                <span>v</span>
-                <span>e</span>
-                <span>l</span>
-                <span>o</span>
-                <span>p</span>
-                <span>e</span>
-                <span>r</span>
+                <AnimatedLetter>w</AnimatedLetter>
+                <AnimatedLetter>e</AnimatedLetter>
+                <AnimatedLetter>b&nbsp;</AnimatedLetter>
+                <AnimatedLetter>d</AnimatedLetter>
+                <AnimatedLetter>e</AnimatedLetter>
+                <AnimatedLetter>v</AnimatedLetter>
+                <AnimatedLetter>e</AnimatedLetter>
+                <AnimatedLetter>l</AnimatedLetter>
+                <AnimatedLetter>o</AnimatedLetter>
+                <AnimatedLetter>p</AnimatedLetter>
+                <AnimatedLetter>e</AnimatedLetter>
+                <AnimatedLetter>r</AnimatedLetter>
             </Title>
         </HeroContainer >
     )
