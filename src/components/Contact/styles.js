@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-import { titleMarginBottom, iconSize } from "../../globalStyles";
+import { titleMarginBottom, iconSize, titleLetterSpacing } from "../../globalStyles";
+import { textReveal } from "../../GlobalStyles/textReveal";
 
 export const ContactContainer = styled.section`
     display: flex;
@@ -14,6 +15,21 @@ export const Title = styled.h2`
     width: 100%;
     text-align: center;
     margin-block-end: ${titleMarginBottom}px;
+    letter-spacing: ${titleLetterSpacing}px;
+    text-indent: ${titleLetterSpacing}px;
+
+    & > span {
+        opacity: 0;
+        filter: blur(2px);
+        
+        ${ 
+          props => props.isVisible && `
+            opacity: 1;
+            filter: blur(0);
+            ${ textReveal(props.length, props.isAnimationEnded)}
+          ` 
+        }
+    }
 `
 
 export const Ul = styled.ul`

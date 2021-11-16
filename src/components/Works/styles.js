@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { textReveal } from "../../GlobalStyles/textReveal";
 
-import { sectionMarginBottom, titleMarginBottom, worksLiMarginBottom, worksItemFontSizeMobile, worksItemFontSizeDesktop } from "../../globalStyles";
+import { sectionMarginBottom, titleMarginBottom, worksLiMarginBottom, worksItemFontSizeMobile, worksItemFontSizeDesktop, titleLetterSpacing } from "../../globalStyles";
 
 export const WorksContainer = styled.section`
     margin-block-end: ${sectionMarginBottom}px;
@@ -8,6 +9,21 @@ export const WorksContainer = styled.section`
 export const Title = styled.h2`
     text-align: center;
     margin-block-end: ${titleMarginBottom}px;
+    letter-spacing: ${titleLetterSpacing}px;
+    text-indent: ${titleLetterSpacing}px;
+
+    & > span {
+        opacity: 0;
+        filter: blur(2px);
+        
+        ${ 
+          props => props.isVisible && `
+            opacity: 1;
+            filter: blur(0);
+            ${ textReveal(props.length, props.isAnimationEnded)}
+          ` 
+        }
+    }
 `
 export const UlContainer = styled.div`
     display: flex;

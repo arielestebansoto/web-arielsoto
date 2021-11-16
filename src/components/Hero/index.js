@@ -15,7 +15,7 @@ export const Hero = () => {
           }
     
         const observer = new IntersectionObserver(callback, options);
-        const element = document.querySelector('#element')
+        const element = document.querySelector('#hero')
         observer.observe(element)
         
         function callback(entries, observer) {
@@ -37,7 +37,7 @@ export const Hero = () => {
     return (
         <HeroContainer > 
         <Title 
-            id='element' 
+            id='hero' 
             isVisible={isVisible} 
             length={length}
             isAnimationEnded={isAnimationEnded}
