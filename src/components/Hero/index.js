@@ -27,8 +27,6 @@ export const Hero = () => {
                     const lastElementStyles = window.getComputedStyle(lastElement)
                     
                     lastElement.addEventListener('animationend', () => {
-                        console.log('end')
-                        console.log(isAnimationEnded)
                         setIsAnimationEnded(true)
                     })
                 }

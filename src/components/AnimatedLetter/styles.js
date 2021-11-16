@@ -3,12 +3,12 @@ import styled from "styled-components";
 export const Span = styled.span`
     display: inline-block;
 
-    transition: all .2s ease-out;
+    transition: all .4s ease-out;
 
     animation-duration: 1s;
     animation-fill-mode: both;
     animation-iteration-count: 1;
-
+    
     &:hover {
         animation-name: rubberBand;
         animation-delay: 0s;
