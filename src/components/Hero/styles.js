@@ -15,16 +15,14 @@ export const Title = styled.h1`
     font-size: 83px;
   }
   font-weight: 400; 
-
+  
   & > span {
     opacity: 0;
-    transform: translateY(-15px);
     filter: blur(2px);
     
     ${ 
       props => props.isVisible && `
         opacity: 1;
-        transform: translateY(0);
         filter: blur(0);
         ${ textReveal(props.length, props.isAnimationEnded)}
       ` 
