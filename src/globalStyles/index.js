@@ -3,9 +3,10 @@ import { createGlobalStyle } from "styled-components";
 export const sectionMarginBottom= 50
 export const titleMarginBottom = 32
 export const iconSize = 48 
-export const worksLiMarginBottom = 30
+export const worksLiMarginBottom = 50
 export const worksItemFontSizeMobile = 30
 export const worksItemFontSizeDesktop = 50
+export const worksItemHeight = 100
 export const titleLetterSpacing = 10
 
 export const GlobalStyle = createGlobalStyle`

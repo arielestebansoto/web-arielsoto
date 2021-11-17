@@ -1,14 +1,15 @@
 import React from 'react'
 
 import { works } from './works'
-import { WorksContainer, Title, Anchor, UlContainer, Ul, Li } from './styles'
+import { WorksContainer, Title, UlContainer, Ul } from './styles'
 import { AnimatedLetter } from '../AnimatedLetter'
+import { ItemWorks } from '../ItemWorks'
 
 export const Works = () => {
     const [ isVisible, setIsVisible ] = React.useState(false)
     const [ length, setLength ] = React.useState()
     const [ isAnimationEnded, setIsAnimationEnded ] = React.useState(false)
-    
+
     React.useEffect(() => {
         const options = {
             rootMargin: '0px',
@@ -34,6 +35,7 @@ export const Works = () => {
             });
         };
     }, [])
+
     return (
         <WorksContainer>
             <Title
@@ -48,15 +50,18 @@ export const Works = () => {
                 <AnimatedLetter>k</AnimatedLetter>
                 <AnimatedLetter>s</AnimatedLetter>
             </Title>
+
             <UlContainer>
-                <Ul>
+                <Ul >
                     {
                         works.map( (work, index) => {
-                            return <Li key={index}> 
-                                <Anchor href={work.href} target="_blank">
-                                    {work.title}
-                                </Anchor>
-                            </Li>
+                            return <ItemWorks 
+                                key={index}
+                                id={index}
+                                href={work.href}
+                                title={work.title}
+                                length={works.length}
+                            />
                         })
                     }
                 </Ul>

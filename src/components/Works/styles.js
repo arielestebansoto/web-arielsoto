@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { textReveal } from "../../GlobalStyles/textReveal";
 
-import { sectionMarginBottom, titleMarginBottom, worksLiMarginBottom, worksItemFontSizeMobile, worksItemFontSizeDesktop, titleLetterSpacing } from "../../globalStyles";
+import { sectionMarginBottom, titleMarginBottom, titleLetterSpacing  } from "../../globalStyles";
 
 export const WorksContainer = styled.section`
     margin-block-end: ${sectionMarginBottom}px;
@@ -38,25 +38,4 @@ export const Ul = styled.ul`
        text-align: initial;
     }
     padding-inline-start: 0;
-`
-
-export const Li = styled.li`
-    list-style: none;
-    margin-block-end: ${worksLiMarginBottom}px;
-`
-
-export const Anchor = styled.a`
-    font-size: ${worksItemFontSizeMobile}px;
-    @media screen and (min-width: 992px) {
-        font-size: ${worksItemFontSizeDesktop}px;
-
-        transition: opacity .5s ease-out;
-        opacity: .5;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
-    text-decoration: none;
-    color: white;    
 `

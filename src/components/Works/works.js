@@ -9,9 +9,9 @@ export const works = [
         href: 'https://arielestebansoto.github.io/breaking-bad-api/',
         description: 'A simply project to fetch a API'
     },
-    {
-        title: '',
-        href: '',
-        description: ''
-    }
+    // {
+    //     title: '',
+    //     href: '',
+    //     description: ''
+    // }
 ]
