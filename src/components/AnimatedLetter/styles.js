@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const Span = styled.span`
     display: inline-block;
 
+    text-shadow: 1px 1px rgba(0, 0, 0, .7);
+
     transition: all .4s ease-out;
 
     animation-duration: 1s;
