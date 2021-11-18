@@ -18,6 +18,8 @@ export const Title = styled.h2`
     letter-spacing: ${titleLetterSpacing}px;
     text-indent: ${titleLetterSpacing}px;
 
+    font-size: 32px;
+
     & > span {
         opacity: 0;
         filter: blur(2px);
@@ -55,11 +57,15 @@ export const Li = styled.li`
     width: ${iconSize * 1.5}px;
     height: ${iconSize * 1.5}px;
 
-    transition: opacity .5s ease-out;
+    transition: 
+        opacity .5s ease-out,
+        transform .5s ease-out
+    ;
     opacity: .5;
     
     &:hover {
         opacity: 1;
+        transform: scale(1.05) translateY(-3px);
     }
 
     &:after {

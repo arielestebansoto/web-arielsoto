@@ -12,6 +12,8 @@ export const Title = styled.h2`
     letter-spacing: ${titleLetterSpacing}px;
     text-indent: ${titleLetterSpacing}px;
 
+    font-size: 32px;
+
     & > span {
         opacity: 0;
         filter: blur(2px);

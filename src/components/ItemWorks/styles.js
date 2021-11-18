@@ -32,6 +32,7 @@ export const Anchor = styled.a`
         font-size: ${worksItemFontSizeDesktop}px;
     }
 
+    text-shadow: 1px 1px rgba(0, 0, 0, .7);
     transition: opacity .5s ease-out;
     opacity: .5;
 
