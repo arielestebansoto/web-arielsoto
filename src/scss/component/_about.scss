@@ -1,9 +1,0 @@
-@use '../base/var';
-.section-about {
-    @extend %section;
-    padding-block-start: var.$height-nav;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
