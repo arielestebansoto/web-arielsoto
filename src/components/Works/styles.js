@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { textReveal } from "../../GlobalStyles/textReveal";
+import { textReveal } from "../../globalStyles/textReveal";
 
 import { sectionMarginBottom, titleMarginBottom, titleLetterSpacing  } from "../../globalStyles";
 

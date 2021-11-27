@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { textReveal } from '../../GlobalStyles/textReveal'
+import { textReveal } from '../../globalStyles/textReveal'
 
 export const HeroContainer = styled.div`
     position: relative;

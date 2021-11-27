@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { titleMarginBottom, iconSize, titleLetterSpacing } from "../../globalStyles";
-import { textReveal } from "../../GlobalStyles/textReveal";
+import { textReveal } from "../../globalStyles/textReveal";
 
 export const ContactContainer = styled.section`
     display: flex;
