@@ -15,11 +15,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@main
       - name: install dependencies
-        run: npm ci
+        run: npm install
       - name: build dependencies
         run: npm run build
       - name: Archive production artifact
-        uses: action/upload-artifact@main
+        uses: actions/upload-artifact@main
         with:
           name: dist
           path: dist
