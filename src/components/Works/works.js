@@ -10,9 +10,9 @@ export const works = [
         description: 'The UI of one of the best Ecommerce. Made only with HTML and CSS vanilla.'
     },
     {
-        title: 'Breaking Bad API',
-        href: 'https://arielestebansoto.github.io/breaking-bad-api/',
-        description: "A simply project to fetch a API."
+        title: 'Breaking Bad APP',
+        href: 'https://arielestebansoto.github.io/breaking-bad-app/',
+        description: "A simply project to integrate a API."
     },
    
     // {
